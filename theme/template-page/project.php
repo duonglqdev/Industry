@@ -35,441 +35,215 @@ get_header();
     <!-- contact area -->
     <div class="content-block">
         <!-- Portfolio  -->
-        <div class="relative max2lg:bg-scroll md:py-20 py-7.5 portfolio uppercase bg-gray-100" id="portfolio">
+        <div class="relative max2lg:bg-scroll bg-white md:py-20 py-7.5 wow fadeIn" data-wow-duration="2s"
+            data-wow-delay="0.6s">
             <div class="container">
-                <div class="site-filters text-center mb-7.5">
-                    <ul class="filters" data-bs-toggle="buttons">
-                        <li data-filter="" class="mb-[3px] active inline-block duration-500">
-                            <input type="radio" class="hidden">
-                            <a href="javascript:void(0);"
-                                class="btn bg-secondary text-white btn-sm rounded-full mx-1.25 maxmd:mb-2.5 uppercase duration-500"><span>All</span></a>
-                        </li>
-                        <li data-filter="web" class="mb-[3px] inline-block duration-500">
-                            <input type="radio" class="hidden">
-                            <a href="javascript:void(0);"
-                                class="btn bg-secondary text-white btn-sm rounded-full mx-1.25 maxmd:mb-2.5 uppercase duration-500"><span>Agricultural</span></a>
-                        </li>
-                        <li data-filter="advertising" class="mb-[3px] inline-block duration-500">
-                            <input type="radio" class="hidden">
-                            <a href="javascript:void(0);"
-                                class="btn bg-secondary text-white btn-sm rounded-full mx-1.25 maxmd:mb-2.5 uppercase duration-500"><span>Chemical</span></a>
-                        </li>
-                        <li data-filter="branding" class="mb-[3px] inline-block duration-500">
-                            <input type="radio" class="hidden">
-                            <a href="javascript:void(0);"
-                                class="btn bg-secondary text-white btn-sm rounded-full mx-1.25 maxmd:mb-2.5 uppercase duration-500"><span>Mechanical</span></a>
-                        </li>
-                        <li data-filter="design" class="mb-[3px] inline-block duration-500">
-                            <input type="radio" class="hidden">
-                            <a href="javascript:void(0);"
-                                class="btn bg-secondary text-white btn-sm rounded-full mx-1.25 maxmd:mb-2.5 uppercase duration-500"><span>Power
-                                    Energy</span></a>
-                        </li>
-                        <li data-filter="photography" class="mb-[3px] inline-block duration-500">
-                            <input type="radio" class="hidden">
-                            <a href="javascript:void(0);"
-                                class="btn bg-secondary text-white btn-sm rounded-full mx-1.25 maxmd:mb-2.5 uppercase duration-500"><span>plants</span></a>
-                        </li>
-                    </ul>
+                <div class="mb-7.5 text-center">
+                    <h2 class="font-roboto-condensed mb-2.5 text-[40px]/[45px] maxlg:text-3xl font-semibold">Dự án
+                        thiết kế</h2>
+                    <p class="mx-auto max-w-[700px] text-2sm">Có rất nhiều biến thể của đoạn văn Lorem Ipsum. Ngành
+                        công nghiệp sắp chữ đã trở thành văn bản chuẩn mực của ngành kể từ khi có một thợ in vô
+                        danh.</p>
                 </div>
-                <div class="clearfix" id="lightgallery">
-                    <ul id="masonry" class="row !m-0 w-full lightgallery text-center">
-                        <li class="web design card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
+                <div class="grid grid-cols-12 gap-x-6">
+                    <div class="col-span-12 text-center">
+                        <div class="mb-7.5 filters2">
+                            <ul class="filters flex flex-wrap mx-2.5" data-bs-toggle="buttons">
+                                <li data-filter="" class="lg:w-1/4 w-1/2 px-2.5 inline-block active">
+                                    <input type="radio" class="hidden">
+                                    <a class="w-full flex py-3 px-2.5 lg:text-xxl text-lg border-b-3 border-[#eee] items-center justify-center font-roboto-condensed relative  after:content-[''] after:h-[3px] after:bg-primary after:w-0 after:absolute after:-bottom-[3px] after:-right-px after:duration-700"
+                                        href="javascript:void(0);"><i
+                                            class="flaticon-worker mr-2.5 text-primary lg:text-[40px] text-3xl lg:leading-10 leading-[30px]"></i><span>Construction</span></a>
+                                </li>
+                                <li data-filter="penthouse" class="lg:w-1/4 w-1/2 px-2.5 inline-block">
+                                    <input type="radio" class="hidden">
+                                    <a class="w-full flex py-3 px-2.5 lg:text-xxl text-lg border-b-3 border-[#eee] items-center justify-center font-roboto-condensed relative  after:content-[''] after:h-[3px] after:bg-primary after:w-0 after:absolute after:-bottom-[3px] after:-right-px after:duration-700"
+                                        href="javascript:void(0);"><i
+                                            class="flaticon-crane mr-2.5 text-primary lg:text-[40px] text-3xl lg:leading-10 leading-[30px]"></i><span>Architecture</span></a>
+                                </li>
+                                <li data-filter="royal" class="lg:w-1/4 w-1/2 px-2.5 inline-block">
+                                    <input type="radio" class="hidden">
+                                    <a class="w-full flex py-3 px-2.5 lg:text-xxl text-lg border-b-3 border-[#eee] items-center justify-center font-roboto-condensed relative  after:content-[''] after:h-[3px] after:bg-primary after:w-0 after:absolute after:-bottom-[3px] after:-right-px after:duration-700"
+                                        href="javascript:void(0);"><i
+                                            class="flaticon-analytics mr-2.5 text-primary lg:text-[40px] text-3xl lg:leading-10 leading-[30px]"></i><span>Consulting</span></a>
+                                </li>
+                                <li data-filter="standard" class="lg:w-1/4 w-1/2 px-2.5 inline-block">
+                                    <input type="radio" class="hidden">
+                                    <a class="w-full flex py-3 px-2.5 lg:text-xxl text-lg border-b-3 border-[#eee] items-center justify-center font-roboto-condensed relative  after:content-[''] after:h-[3px] after:bg-primary after:w-0 after:absolute after:-bottom-[3px] after:-right-px after:duration-700"
+                                        href="javascript:void(0);"><i
+                                            class="flaticon-optimization mr-2.5 text-primary lg:text-[40px] text-3xl lg:leading-10 leading-[30px]"></i><span>Mechanical</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row !pl-0 sp10">
+                    <div class="w-full">
+                        <ul id="masonry" class="dlab-gallery-listing gallery mfp-gallery text-center">
+                            <li class="card-container lg:w-1/3 sm:w-1/2 w-full px-[5px] royal">
                                 <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
+                                    class="rounded-md mb-2.5 overflow-hidden relative before:content-[''] before:bg-black/0 before:absolute before:left-0 before:top-0 before:size-full before:z-1 before:duration-700 hover:before:size-full hover:before:bg-black/50 group">
+                                    <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/construct/image_2.jpg"
                                         alt="">
                                     <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible duration-700 scale-50 group-hover:scale-100 group-hover:opacity-100 group-hover:visible">
                                         <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
+                                            class="w-[250px] min-w-[250px] absolute z-1 top-1/2 [transform:translate(-50%,_-50%)] left-1/2">
+                                            <div class="bg-white rounded-md p-5">
                                                 <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-                                                </span>
+                                                    class="font-montserrat uppercase font-semibold text-sm text-primary">Xây
+                                                    dựng</span>
+                                                <h3 class="font-roboto-condensed mb-0"><a
+                                                        href="portfolio-details.html">Trung tâm trẻ em Westwood</a>
+                                                </h3>
+                                            </div>
+                                            <div
+                                                class="bg-primary absolute top-13.5 h-full w-[calc(100%_+_20px)] align-bottom flex items-end text-center flex-row rounded-md -z-1 -left-2.5">
+                                                <a href="portfolio-details.html"
+                                                    class="w-full font-montserrat underline uppercase font-semibold p-3.75 absolute left-0 bottom-0">Xem
+                                                    chi tiết</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">Muchen Railway
-                                            Station</a></p>
-                                    <p class="mb-0 "><small>System</small></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li
-                            class="advertising branding photography card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
+                            </li>
+                            <li class="card-container lg:w-1/3 sm:w-1/2 w-full px-[5px] standard penthouse">
                                 <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <a href="portfolio-details.html"> <img
-                                            src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_2.jpg"
-                                            alt=""> </a>
+                                    class="rounded-md mb-2.5 overflow-hidden relative before:content-[''] before:bg-black/0 before:absolute before:left-0 before:top-0 before:size-full before:z-1 before:duration-700 hover:before:size-full hover:before:bg-black/50 group">
+                                    <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/construct/image_1.jpg"
+                                        alt="">
                                     <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible duration-700 scale-50 group-hover:scale-100 group-hover:opacity-100 group-hover:visible">
                                         <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
+                                            class="w-[250px] min-w-[250px] absolute z-1 top-1/2 [transform:translate(-50%,_-50%)] left-1/2">
+                                            <div class="bg-white rounded-md p-5">
                                                 <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-                                                </span>
+                                                    class="font-montserrat uppercase font-semibold text-sm text-primary">Ngành
+                                                    công nghiệp</span>
+                                                <h3 class="font-roboto-condensed mb-0"><a
+                                                        href="portfolio-details.html">Trung tâm trẻ em Westwood</a>
+                                                </h3>
+                                            </div>
+                                            <div
+                                                class="bg-primary absolute top-13.5 h-full w-[calc(100%_+_20px)] align-bottom flex items-end text-center flex-row rounded-md -z-1 -left-2.5">
+                                                <a href="portfolio-details.html"
+                                                    class="w-full font-montserrat underline uppercase font-semibold p-3.75 absolute left-0 bottom-0">Xem
+                                                    chi tiết</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">Mining Plant Set Up</a>
-                                    </p>
-                                    <p class="mb-0 "><small>Mining / Plants</small></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="branding design photography card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
+                            </li>
+                            <li class="card-container lg:w-1/3 sm:w-1/2 w-full px-[5px] royal">
                                 <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <a href="portfolio-details.html"> <img
-                                            src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_3.jpg"
-                                            alt=""> </a>
+                                    class="rounded-md mb-2.5 overflow-hidden relative before:content-[''] before:bg-black/0 before:absolute before:left-0 before:top-0 before:size-full before:z-1 before:duration-700 hover:before:size-full hover:before:bg-black/50 group">
+                                    <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/construct/image_3.jpg"
+                                        alt="">
                                     <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible duration-700 scale-50 group-hover:scale-100 group-hover:opacity-100 group-hover:visible">
                                         <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
+                                            class="w-[250px] min-w-[250px] absolute z-1 top-1/2 [transform:translate(-50%,_-50%)] left-1/2">
+                                            <div class="bg-white rounded-md p-5">
                                                 <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-                                                </span>
+                                                    class="font-montserrat uppercase font-semibold text-sm text-primary">Bảo
+                                                    chì</span>
+                                                <h3 class="font-roboto-condensed mb-0"><a
+                                                        href="portfolio-details.html">Trung tâm trẻ em Westwood</a>
+                                                </h3>
+                                            </div>
+                                            <div
+                                                class="bg-primary absolute top-13.5 h-full w-[calc(100%_+_20px)] align-bottom flex items-end text-center flex-row rounded-md -z-1 -left-2.5">
+                                                <a href="portfolio-details.html"
+                                                    class="w-full font-montserrat underline uppercase font-semibold p-3.75 absolute left-0 bottom-0">Xem
+                                                    chi tiết</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">sanfran cisco bridge</a>
-                                    </p>
-                                    <p class="mb-0 "><small>Engineering</small></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="web design card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
+                            </li>
+                            <li class="card-container lg:w-1/3 sm:w-1/2 w-full px-[5px] penthouse">
                                 <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <a href="portfolio-details.html"> <img
-                                            src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_4.jpg"
-                                            alt=""> </a>
+                                    class="rounded-md mb-2.5 overflow-hidden relative before:content-[''] before:bg-black/0 before:absolute before:left-0 before:top-0 before:size-full before:z-1 before:duration-700 hover:before:size-full hover:before:bg-black/50 group">
+                                    <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/construct/image_4.jpg"
+                                        alt="">
                                     <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible duration-700 scale-50 group-hover:scale-100 group-hover:opacity-100 group-hover:visible">
                                         <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
+                                            class="w-[250px] min-w-[250px] absolute z-1 top-1/2 [transform:translate(-50%,_-50%)] left-1/2">
+                                            <div class="bg-white rounded-md p-5">
                                                 <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-                                                </span>
+                                                    class="font-montserrat uppercase font-semibold text-sm text-primary">Xây
+                                                    dựng</span>
+                                                <h3 class="font-roboto-condensed mb-0"><a
+                                                        href="portfolio-details.html">Trung tâm trẻ em Westwood</a>
+                                                </h3>
+                                            </div>
+                                            <div
+                                                class="bg-primary absolute top-13.5 h-full w-[calc(100%_+_20px)] align-bottom flex items-end text-center flex-row rounded-md -z-1 -left-2.5">
+                                                <a href="portfolio-details.html"
+                                                    class="w-full font-montserrat underline uppercase font-semibold p-3.75 absolute left-0 bottom-0">Xem
+                                                    chi tiết</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">hamburg wind energy</a>
-                                    </p>
-                                    <p class="mb-0 "><small>Energy</small></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="web branding card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
+                            </li>
+                            <li class="card-container lg:w-1/3 sm:w-1/2 w-full px-[5px] standard">
                                 <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <a href="portfolio-details.html"> <img
-                                            src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_5.jpg"
-                                            alt=""> </a>
+                                    class="rounded-md mb-2.5 overflow-hidden relative before:content-[''] before:bg-black/0 before:absolute before:left-0 before:top-0 before:size-full before:z-1 before:duration-700 hover:before:size-full hover:before:bg-black/50 group">
+                                    <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/construct/image_5.jpg"
+                                        alt="">
                                     <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible duration-700 scale-50 group-hover:scale-100 group-hover:opacity-100 group-hover:visible">
                                         <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
+                                            class="w-[250px] min-w-[250px] absolute z-1 top-1/2 [transform:translate(-50%,_-50%)] left-1/2">
+                                            <div class="bg-white rounded-md p-5">
                                                 <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-                                                </span>
+                                                    class="font-montserrat uppercase font-semibold text-sm text-primary">Ngành
+                                                    công nghiệp</span>
+                                                <h3 class="font-roboto-condensed mb-0"><a
+                                                        href="portfolio-details.html">Trung tâm trẻ em Westwood</a>
+                                                </h3>
+                                            </div>
+                                            <div
+                                                class="bg-primary absolute top-13.5 h-full w-[calc(100%_+_20px)] align-bottom flex items-end text-center flex-row rounded-md -z-1 -left-2.5">
+                                                <a href="portfolio-details.html"
+                                                    class="w-full font-montserrat underline uppercase font-semibold p-3.75 absolute left-0 bottom-0">Xem
+                                                    chi tiết</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">Capturing Manila</a></p>
-                                    <p class="mb-0 "><small>industry</small></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="advertising design photography card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
+                            </li>
+                            <li class="card-container lg:w-1/3 sm:w-1/2 w-full px-[5px] standard penthouse">
                                 <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <a href="portfolio-details.html"> <img
-                                            src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_6.jpg"
-                                            alt=""> </a>
+                                    class="rounded-md mb-2.5 overflow-hidden relative before:content-[''] before:bg-black/0 before:absolute before:left-0 before:top-0 before:size-full before:z-1 before:duration-700 hover:before:size-full hover:before:bg-black/50 group">
+                                    <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/construct/image_6.jpg"
+                                        alt="">
                                     <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
+                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible duration-700 scale-50 group-hover:scale-100 group-hover:opacity-100 group-hover:visible">
                                         <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
+                                            class="w-[250px] min-w-[250px] absolute z-1 top-1/2 [transform:translate(-50%,_-50%)] left-1/2">
+                                            <div class="bg-white rounded-md p-5">
                                                 <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-                                                </span>
+                                                    class="font-montserrat uppercase font-semibold text-sm text-primary">Bảo
+                                                    trì</span>
+                                                <h3 class="font-roboto-condensed mb-0"><a
+                                                        href="portfolio-details.html">Trung tâm trẻ em Westwood</a>
+                                                </h3>
+                                            </div>
+                                            <div
+                                                class="bg-primary absolute top-13.5 h-full w-[calc(100%_+_20px)] align-bottom flex items-end text-center flex-row rounded-md -z-1 -left-2.5">
+                                                <a href="portfolio-details.html"
+                                                    class="w-full font-montserrat underline uppercase font-semibold p-3.75 absolute left-0 bottom-0">Xem
+                                                    chi tiết</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">berlin central bank</a>
-                                    </p>
-                                    <p class="mb-0 "><small>Bank / Constructions</small></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="web branding card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
-                                <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <a href="portfolio-details.html"> <img
-                                            src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_7.jpg"
-                                            alt=""> </a>
-                                    <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-                                        <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
-                                                <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">Crop Identity</a></p>
-                                    <p class="mb-0 "><small>Branding and Identity</small></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="advertising design photography card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
-                                <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <a href="portfolio-details.html"> <img
-                                            src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_8.jpg"
-                                            alt=""> </a>
-                                    <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-                                        <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
-                                                <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">hamburg wind energy</a>
-                                    </p>
-                                    <p class="mb-0 "><small>industry</small></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="web photography card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
-                                <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <a href="portfolio-details.html"> <img
-                                            src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_9.jpg"
-                                            alt=""> </a>
-                                    <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-                                        <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
-                                                <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">Capturing Manila</a></p>
-                                    <p class="mb-0 "><small>industry</small></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="advertising branding card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
-                                <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <a href="portfolio-details.html"> <img
-                                            src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_10.jpg"
-                                            alt=""> </a>
-                                    <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-                                        <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
-                                                <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">berlin central bank</a>
-                                    </p>
-                                    <p class="mb-0 "><small>Bank / Constructions</small></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="web design card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
-                                <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <a href="portfolio-details.html"> <img
-                                            src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_11.jpg"
-                                            alt=""> </a>
-                                    <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-                                        <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
-                                                <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">sanfran cisco bridge</a>
-                                    </p>
-                                    <p class="mb-0 "><small>Engineering</small></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li
-                            class="advertising branding photography card-container xl:w-1/4 lg:w-1/3 sm:w-1/2 w-full p-0">
-                            <div class="p-[7px] group">
-                                <div
-                                    class="relative overflow-hidden after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-primary after:opacity-0 after:duration-700 group-hover:after:opacity-80">
-                                    <a href="portfolio-details.html"> <img
-                                            src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_12.jpg"
-                                            alt=""> </a>
-                                    <div
-                                        class="absolute left-0 bottom-0 size-full text-center z-[10] opacity-0 invisible group-hover:opacity-100 group-hover:visible">
-                                        <div
-                                            class="left-1/2 absolute top-1/2 [transform:translate(-50%,_-50%)] w-full px-2.5 mt-3.75 opacity-0 duration-200 group-hover:mt-0 group-hover:opacity-100">
-                                            <div class="text-white">
-                                                <a class="mx-[7px] group/second" href="portfolio-details.html"><i
-                                                        class="fas fa-link size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i></a>
-                                                <span
-                                                    data-exthumbimage="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    data-src="https://industry.dexignzone.com/tailwind/demo/assets/images/portfolio/image_1.jpg"
-                                                    class="lg-item group/second cursor-pointer"
-                                                    title="Factory Managment">
-                                                    <i
-                                                        class="far fa-image size-[46px] leading-[46px] rounded-full text-center bg-white text-black inline-block border-2 border-white duration-500 group-hover/second:bg-transparent group-hover/second:text-white"></i>
-
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dez-info p-7.5 bg-white">
-                                    <p class="mb-0 text-black"><a href="portfolio-details.html">Muchen Railway
-                                            Station</a></p>
-                                    <p class="mb-0 "><small>System</small></p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

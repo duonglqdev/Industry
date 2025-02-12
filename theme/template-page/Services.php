@@ -20,8 +20,7 @@ get_header();
                 <!-- Breadcrumb row -->
                 <div>
                     <ul class="flex justify-center items-center">
-                        <li
-                            class="mr-[3px] text-white inline-block font-medium after:content-['\f105'] after:ml-[7px] after:font-['Font_Awesome_5_Free'] after:font-semibold">
+                        <li class="mr-[3px] text-white inline-block font-medium">
                             <a href="index.html">Home</a>
                         </li>
                         <?php echo svg('play-fill', '15', '15', 'text-white') ?>
@@ -36,131 +35,128 @@ get_header();
     <!-- contact area -->
     <div class="content-block">
         <!-- Services Info Head -->
-        <div
-            class="relative max2lg:bg-scroll md:py-20 py-7.5 bg-primary after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:opacity-50 after:bg-[linear-gradient(45deg,_var(--primary)_8%,var(--primary-hover)_100%)]">
+        <div class="relative max2lg:bg-scroll md:py-20 py-7.5 bg-gray-100">
             <div class="container relative z-1">
-                <div class="grid grid-cols-12">
-                    <div class="col-span-12 text-center">
-                        <h3 class="text-white max-w-[700px] m-auto">To others what may appear the impossible, becomes
-                            possible with Uncode.</h3>
+                <div class="relative max2lg:bg-scroll bg-gray-100 md:pt-20 md:pb-13.5 sm:pb-5 pt-7.5">
+                    <div class="container">
+                        <div class="md:mb-13.5 mb-6.25 text-center">
+                            <h2 class="mb-1.25 sm:text-4xl/[45px] text-2.5xl/[30px] font-semibold"> Dịch vụ của chúng
+                                tôi
+                            </h2>
+                            <p class="mx-auto max-w-[700px] pt-2.5 text-2sm ">Có rất nhiều biến thể của đoạn văn Lorem
+                                Ipsum. Ngành công nghiệp sắp chữ đã trở thành văn bản chuẩn mực của ngành kể từ khi có
+                                một
+                                thợ in vô danh.</p>
+                        </div>
+                        <div class="grid grid-cols-12 gap-x-6">
+                            <div class="md:col-span-6 lg:col-span-4 col-span-12 wow fadeInUp" data-wow-duration="2s"
+                                data-wow-delay="0.2s">
+                                <div
+                                    class="sm:py-13.5 py-9 px-7.5 bg-white mb-7.5 shadow-wraper z-1 relative before:content-['01'] before:absolute before:right-7.5 before:top-7.5 before:text-[100px]/[80px] before:font-bold before:text-black/5 before:duration-500 hover:before:text-white/20 after:content-[''] after:h-full after:w-0 after:bg-primary after:absolute after:bottom-0 after:right-0 after:-z-1 after:origin-left after:duration-700 hover:after:origin-right hover:after:right-auto hover:after:left-0 hover:after:w-full group">
+                                    <div class="w-20 mb-6.25 inline-block text-center">
+                                        <a href="javascript:void(0);" class="icon-cell"><i
+                                                class="flaticon-robot-arm text-7xl/[70px] text-primary group-hover:text-white"></i></a>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h3 class="text-xl/[30px] font-semibold group-hover:text-white mb-3.75">Công
+                                            trình
+                                            cơ khí</h3>
+                                        <p class="mb-0  group-hover:text-white">Lorem ipsum dolor sit amet, consectetuer
+                                            adipiscing elit, sed diam nonummy nibh euismod </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:col-span-6 lg:col-span-4 col-span-12 wow fadeInUp" data-wow-duration="2s"
+                                data-wow-delay="0.4s">
+                                <div
+                                    class="sm:py-13.5 py-9 px-7.5 bg-white mb-7.5 shadow-wraper z-1 relative before:content-['02'] before:absolute before:right-7.5 before:top-7.5 before:text-[100px]/[80px] before:font-bold before:text-black/5 before:duration-500 hover:before:text-white/20 after:content-[''] after:h-full after:w-0 after:bg-primary after:absolute after:bottom-0 after:right-0 after:-z-1 after:origin-left after:duration-700 hover:after:origin-right hover:after:right-auto hover:after:left-0 hover:after:w-full group">
+                                    <div class="w-20 mb-6.25 inline-block text-center">
+                                        <a href="javascript:void(0);" class="icon-cell"><i
+                                                class="flaticon-factory-1 text-7xl/[70px] text-primary group-hover:text-white"></i></a>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h3 class="text-xl/[30px] font-semibold group-hover:text-white mb-3.75">Điện và
+                                            Năng
+                                            lượng</h3>
+                                        <p class="mb-0  group-hover:text-white">Lorem ipsum dolor sit amet, consectetuer
+                                            adipiscing elit, sed diam nonummy nibh euismod </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:col-span-6 lg:col-span-4 col-span-12 wow fadeInUp" data-wow-duration="2s"
+                                data-wow-delay="0.6s">
+                                <div
+                                    class="sm:py-13.5 py-9 px-7.5 bg-white mb-7.5 shadow-wraper z-1 relative before:content-['03'] before:absolute before:right-7.5 before:top-7.5 before:text-[100px]/[80px] before:font-bold before:text-black/5 before:duration-500 hover:before:text-white/20 after:content-[''] after:h-full after:w-0 after:bg-primary after:absolute after:bottom-0 after:right-0 after:-z-1 after:origin-left after:duration-700 hover:after:origin-right hover:after:right-auto hover:after:left-0 hover:after:w-full group">
+                                    <div class="w-20 mb-6.25 inline-block text-center">
+                                        <a href="javascript:void(0);" class="icon-cell"><i
+                                                class="flaticon-fuel-station text-7xl/[70px] text-primary group-hover:text-white"></i></a>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h3 class="text-xl/[30px] font-semibold group-hover:text-white mb-3.75">Nhà máy
+                                            lọc
+                                            dầu</h3>
+                                        <p class="mb-0  group-hover:text-white">Lorem ipsum dolor sit amet, consectetuer
+                                            adipiscing elit, sed diam nonummy nibh euismod </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:col-span-6 lg:col-span-4 col-span-12 wow fadeInUp" data-wow-duration="2s"
+                                data-wow-delay="0.8s">
+                                <div
+                                    class="sm:py-13.5 py-9 px-7.5 bg-white mb-7.5 shadow-wraper z-1 relative before:content-['04'] before:absolute before:right-7.5 before:top-7.5 before:text-[100px]/[80px] before:font-bold before:text-black/5 before:duration-500 hover:before:text-white/20 after:content-[''] after:h-full after:w-0 after:bg-primary after:absolute after:bottom-0 after:right-0 after:-z-1 after:origin-left after:duration-700 hover:after:origin-right hover:after:right-auto hover:after:left-0 hover:after:w-full group">
+                                    <div class="w-20 mb-6.25 inline-block text-center">
+                                        <a href="javascript:void(0);" class="icon-cell"><i
+                                                class="flaticon-fuel-truck text-7xl/[70px] text-primary group-hover:text-white"></i></a>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h3 class="text-xl/[30px] font-semibold group-hover:text-white mb-3.75">Ngành
+                                            công
+                                            nghiệp dầu khí</h3>
+                                        <p class="mb-0  group-hover:text-white">Lorem ipsum dolor sit amet, consectetuer
+                                            adipiscing elit, sed diam nonummy nibh euismod </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:col-span-6 lg:col-span-4 col-span-12 wow fadeInUp" data-wow-duration="2s"
+                                data-wow-delay="0.2s">
+                                <div
+                                    class="sm:py-13.5 py-9 px-7.5 bg-white mb-7.5 shadow-wraper z-1 relative before:content-['05'] before:absolute before:right-7.5 before:top-7.5 before:text-[100px]/[80px] before:font-bold before:text-black/5 before:duration-500 hover:before:text-white/20 after:content-[''] after:h-full after:w-0 after:bg-primary after:absolute after:bottom-0 after:right-0 after:-z-1 after:origin-left after:duration-700 hover:after:origin-right hover:after:right-auto hover:after:left-0 hover:after:w-full group">
+                                    <div class="w-20 mb-6.25 inline-block text-center">
+                                        <a href="javascript:void(0);" class="icon-cell"><i
+                                                class="flaticon-conveyor-1 text-7xl/[70px] text-primary group-hover:text-white"></i></a>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h3 class="text-xl/[30px] font-semibold group-hover:text-white mb-3.75">Sản xuất
+                                            ô
+                                            tô</h3>
+                                        <p class="mb-0  group-hover:text-white">Lorem ipsum dolor sit amet, consectetuer
+                                            adipiscing elit, sed diam nonummy nibh euismod </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:col-span-6 lg:col-span-4 col-span-12 wow fadeInUp" data-wow-duration="2s"
+                                data-wow-delay="0.4s">
+                                <div
+                                    class="sm:py-13.5 py-9 px-7.5 bg-white mb-7.5 shadow-wraper z-1 relative before:content-['06'] before:absolute before:right-7.5 before:top-7.5 before:text-[100px]/[80px] before:font-bold before:text-black/5 before:duration-500 hover:before:text-white/20 after:content-[''] after:h-full after:w-0 after:bg-primary after:absolute after:bottom-0 after:right-0 after:-z-1 after:origin-left after:duration-700 hover:after:origin-right hover:after:right-auto hover:after:left-0 hover:after:w-full group">
+                                    <div class="w-20 mb-6.25 inline-block text-center">
+                                        <a href="javascript:void(0);" class="icon-cell"><i
+                                                class="flaticon-engineer-1 text-7xl/[70px] text-primary group-hover:text-white"></i></a>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <h3 class="text-xl/[30px] font-semibold group-hover:text-white mb-3.75">Nghiên
+                                            cứu
+                                            hóa học</h3>
+                                        <p class="mb-0  group-hover:text-white">Lorem ipsum dolor sit amet, consectetuer
+                                            adipiscing elit, sed diam nonummy nibh euismod </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Services Info Head END -->
-        <!-- Services -->
-        <div class="relative max2lg:bg-scroll -mb-7.5">
-            <div class="grid grid-cols-12 about-industry">
-                <div class="lg:col-span-8 col-span-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                    <div class="overflow-hidden group">
-                        <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/our-work/oilgas/pic1.jpg"
-                            alt=""
-                            class="sm:min-h-[500px] min-h-[300px] w-full block object-cover duration-700 group-hover:scale-125">
-                    </div>
-                </div>
-                <div class="lg:col-span-4 col-span-12 bg-white wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
-                    <div class="p-14.5 max2lg:p-7.5 items-center flex-wrap flex h-full">
-                        <div>
-                            <h2 class="text-[45px]/[55px] max2lg:text-4xl/[44px] max2lg:mb-3.75 font-bold text-black">
-                                <span class="font-normal">Mechanical</span> <br>Works
-                            </h2>
-                            <p class="text-gray-500">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry.</p>
-                            <a href="services-2.html"
-                                class="btn border-2 border-primary text-primary hover:text-white hover:bg-primary duration-700">Về
-                                chúng tôi</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-4 col-span-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
-                    <div class="overflow-hidden group">
-                        <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/our-work/oilgas/pic2.jpg"
-                            alt=""
-                            class="sm:min-h-[500px] min-h-[300px] w-full block object-cover duration-700 group-hover:scale-125">
-                    </div>
-                </div>
-                <div class="lg:col-span-4 col-span-12 bg-secondary text-white wow fadeIn" data-wow-duration="2s"
-                    data-wow-delay="0.8s">
-                    <div class="p-14.5 max2lg:p-7.5 items-center flex-wrap flex h-full">
-                        <div>
-                            <h2 class="text-white text-[45px]/[55px] max2lg:text-4xl/[44px] max2lg:mb-3.75 font-bold">
-                                <span class="font-normal">Power & </span> <br>Energy.
-                            </h2>
-                            <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry.</p>
-                            <a href="services-2.html"
-                                class="btn border-2 border-white text-white hover:text-gray-500 hover:bg-white duration-700">Về
-                                chúng tôi</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-4 col-span-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                    <div class="overflow-hidden group">
-                        <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/our-work/oilgas/pic3.jpg"
-                            alt=""
-                            class="sm:min-h-[500px] min-h-[300px] w-full block object-cover duration-700 group-hover:scale-125">
-                    </div>
-                </div>
-                <div class="lg:col-span-4 col-span-12 bg-primary text-white wow fadeIn" data-wow-duration="2s"
-                    data-wow-delay="0.4s">
-                    <div class="p-14.5 max2lg:p-7.5 items-center flex-wrap flex h-full">
-                        <div>
-                            <h2 class="text-white text-[45px]/[55px] max2lg:text-4xl/[44px] max2lg:mb-3.75 font-bold">
-                                <span class="font-normal">Petroleum </span> <br>Refinery.
-                            </h2>
-                            <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry.</p>
-                            <a href="services-2.html"
-                                class="btn border-2 border-white text-white hover:text-gray-500 hover:bg-white duration-700">Về
-                                chúng tôi</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-4 col-span-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
-                    <div class="overflow-hidden group">
-                        <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/our-work/oilgas/pic4.jpg"
-                            alt=""
-                            class="sm:min-h-[500px] min-h-[300px] w-full block object-cover duration-700 group-hover:scale-125">
-                    </div>
-                </div>
-                <div class="lg:col-span-4 col-span-12 bg-primary text-white wow fadeIn" data-wow-duration="2s"
-                    data-wow-delay="0.8s">
-                    <div class="p-14.5 max2lg:p-7.5 items-center flex-wrap flex h-full">
-                        <div>
-                            <h2 class="text-white text-[45px]/[55px] max2lg:text-4xl/[44px] max2lg:mb-3.75 font-bold">
-                                <span class="font-normal">Oil & Gas </span> <br>Industry.
-                            </h2>
-                            <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry.</p>
-                            <a href="services-2.html"
-                                class="btn border-2 border-white text-white hover:text-gray-500 hover:bg-white duration-700">Về
-                                chúng tôi</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-4 col-span-12 bg-white wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-                    <div class="p-14.5 max2lg:p-7.5 items-center flex-wrap flex h-full">
-                        <div>
-                            <h2 class="text-[45px]/[55px] max2lg:text-4xl/[44px] max2lg:mb-3.75 font-bold text-black">
-                                <span class="font-normal">Automative </span> <br>Manufacturing.
-                            </h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <a href="services-2.html"
-                                class="btn border-2 border-primary text-primary hover:text-white hover:bg-primary duration-700">Về
-                                chúng tôi</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-8 col-span-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
-                    <div class="overflow-hidden group">
-                        <img src="https://industry.dexignzone.com/tailwind/demo/assets/images/our-work/oilgas/pic5.jpg"
-                            alt=""
-                            class="sm:min-h-[500px] min-h-[300px] w-full block object-cover duration-700 group-hover:scale-125">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Services END -->
     </div>
     <!-- contact area END -->
 </div>

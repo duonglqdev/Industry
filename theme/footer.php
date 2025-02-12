@@ -14,37 +14,36 @@
 	<!-- newsletter part -->
 	<div
 		class="overflow-hidden relative z-1 after:content-[''] after:bg-[#191f23] after:absolute after:-z-1 after:w-full after:h-17.5 after:left-0 after:bottom-0">
-		<div class="w-full h-fit bg-primary">
-			<div class="container">
-				<div class="bg-primary rounded-2lg flex maxmd:flex-wrap maxmd:pb-5  wow fadeIn" data-wow-duration="2s"
-					data-wow-delay="0.6s">
-					<div
-						class="md:flex-[0_0_33.33%] md:max-w-[33.33%] relative lg:py-6.25 lg:pr-5 lg:!pl-28 md:p-5 !pl-[75px] z-1 pt-6.25 pr-5 pb-1.25 group after:content-[''] after:h-full after:w-13.5 after:absolute after:-right-3.75 after:top-0 after:-z-1 after:bg-[url(../images/icon/right.png)] after:bg-contain after:bg-right after:bg-no-repeat after:opacity-50 maxmd:after:hidden">
-						<img src="images/icon1.png" alt=""
-							class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
-						<h4 class="mb-2.5 text-white text-xxl">Address</h4>
-						<p class="mb-0 text-white max2lg:text-sm">8901 Marmora Road Chi Minh City, Vietnam</p>
-					</div>
-					<div
-						class="md:flex-[0_0_33.33%] md:max-w-[33.33%] relative lg:py-6.25 lg:pr-5 lg:!pl-28 md:p-5 !pl-[75px] z-1 pt-6.25 pr-5 pb-1.25 group after:content-[''] after:h-full after:w-13.5 after:absolute after:-right-3.75 after:top-0 after:-z-1 after:bg-[url(../images/icon/right.png)] after:bg-contain after:bg-right after:bg-no-repeat after:opacity-50 maxmd:after:hidden">
-						<img src="images/icon2.png" alt=""
-							class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
-						<h4 class="mb-2.5 text-white text-xxl">Phone</h4>
-						<p class="mb-0 text-white max2lg:text-sm">+00 234 678 9012 <br> +0 1234 5678 90</p>
-					</div>
-					<div
-						class="md:flex-[0_0_33.33%] md:max-w-[33.33%] relative lg:py-6.25 lg:pr-5 lg:!pl-28 md:p-5 !pl-[75px] z-1 pt-6.25 pr-5 pb-1.25 group">
-						<img src="images/icon3.png" alt=""
-							class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
-						<h4 class="mb-2.5 text-white text-xxl">Email Contact</h4>
-						<p class="mb-0 text-white max2lg:text-sm">info@example.com <br> company@gmail.com</p>
-					</div>
+		<div class="container">
+			<div class="bg-primary rounded-2lg flex maxmd:flex-wrap maxmd:pb-5  wow fadeIn" data-wow-duration="2s"
+				data-wow-delay="0.6s">
+				<div
+					class="md:flex-[0_0_33.33%] md:max-w-[33.33%] relative lg:py-6.25 lg:pr-5 lg:!pl-28 md:p-5 !pl-[75px] z-1 pt-6.25 pr-5 pb-1.25 group after:content-[''] after:h-full after:w-13.5 after:absolute after:-right-3.75 after:top-0 after:-z-1 after:bg-[url(../images/icon/right.png)] after:bg-contain after:bg-right after:bg-no-repeat after:opacity-50 maxmd:after:hidden">
+					<img src="https://industry.dexignzone.com/tailwind/demo/assets/images/icon/icon1.png" alt=""
+						class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
+					<h4 class="mb-2.5 text-white text-xxl">Address</h4>
+					<p class="mb-0 text-white max2lg:text-sm">8901 Marmora Road Chi Minh City, Vietnam</p>
+				</div>
+				<div
+					class="md:flex-[0_0_33.33%] md:max-w-[33.33%] relative lg:py-6.25 lg:pr-5 lg:!pl-28 md:p-5 !pl-[75px] z-1 pt-6.25 pr-5 pb-1.25 group after:content-[''] after:h-full after:w-13.5 after:absolute after:-right-3.75 after:top-0 after:-z-1 after:bg-[url(../images/icon/right.png)] after:bg-contain after:bg-right after:bg-no-repeat after:opacity-50 maxmd:after:hidden">
+					<img src="https://industry.dexignzone.com/tailwind/demo/assets/images/icon/icon2.png" alt=""
+						class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
+					<h4 class="mb-2.5 text-white text-xxl">Phone</h4>
+					<p class="mb-0 text-white max2lg:text-sm">+00 234 678 9012 <br> +0 1234 5678 90</p>
+				</div>
+				<div
+					class="md:flex-[0_0_33.33%] md:max-w-[33.33%] relative lg:py-6.25 lg:pr-5 lg:!pl-28 md:p-5 !pl-[75px] z-1 pt-6.25 pr-5 pb-1.25 group">
+					<img src="https://industry.dexignzone.com/tailwind/demo/assets/images/icon/icon3.png" alt=""
+						class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
+					<h4 class="mb-2.5 text-white text-xxl">Email Contact</h4>
+					<p class="mb-0 text-white max2lg:text-sm">info@example.com <br> company@gmail.com</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- footer top part -->
-	<div class="bg-[#191F23] bg-contain bg-center pt-17.5 pb-7.5" style="background-image:url(images/bg2.png);">
+	<div class="bg-[#191F23] bg-contain bg-center pt-17.5 pb-7.5"
+		style="background-image:url('https://industry.dexignzone.com/tailwind/demo/assets/images/background/bg2.png');">
 		<div class="container">
 			<div class="grid grid-cols-12 gap-x-6">
 				<div class="md:col-span-4 col-span-12">

@@ -9,22 +9,22 @@ get_header();
 
 <div class="page-content bg-white">
     <!-- inner page banner -->
-    <div class="relative table md:h-[220px] h-[180px] w-full after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-black/50 text-center bg-top bg-cover"
-        style="background-image: url('https://industry.dexignzone.com/tailwind/demo/assets/images/banner/bnr3.jpg')">
+    <div class="relative table md:h-[220px] h-[180px] w-full after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-black/50 text-center bg-top bg-cover "
+        style="background-image: url(https://industry.dexignzone.com/tailwind/demo/assets/images/banner/bnr4.jpg);">
         <div class="container relative z-1 table h-full">
             <div
                 class="lg:flex table-cell items-center justify-between align-middle text-center md:h-[220px] h-[180px] maxmd:py-3.75">
                 <h1
                     class="font-semibold md:text-[40px] text-2xl lg:mb-0 mb-2.5 text-white maxmd:leading-8 maxmd:text-center">
-                    Detail</h1>
+                    Portfolio Detail</h1>
                 <!-- Breadcrumb row -->
                 <div>
                     <ul class="flex justify-center items-center">
                         <li class="mr-[3px] text-white inline-block font-medium">
-                            <a href="index.html">Trang chủ</a>
+                            <a href="index.html">Home</a>
                         </li>
                         <?php echo svg('play-fill', '15', '15', 'text-white') ?>
-                        <li class="mr-[3px] text-white inline-block font-medium">Detail</li>
+                        <li class="mr-[3px] text-white inline-block font-medium">Portfolio Detail</li>
                     </ul>
                 </div>
                 <!-- Breadcrumb row END -->
@@ -51,6 +51,7 @@ get_header();
                                 <div class="pl-[55px] mb-7.5 font-semibold relative text-2sm">
                                     <i
                                         class="flex justify-center items-center absolute bg-primary size-10 text-white rounded-full leading-10 text-center left-0 top-0"><?php echo svg('person', '20', '20') ?></i>
+
                                     <strong class="font-semibold block">CLIENT</strong> Martin Stewart
                                 </div>
                             </div>
@@ -64,14 +65,14 @@ get_header();
                             <div class="sm:col-span-6 col-span-12">
                                 <div class="pl-[55px] mb-7.5 font-semibold relative text-2sm">
                                     <i
-                                        class="flex justify-center items-center absolute bg-primary size-10 text-white rounded-full leading-10 text-center left-0 top-0"><?php echo svg('arrows-angle-expand', '20', '20', '') ?></i>
+                                        class="flex justify-center items-center absolute bg-primary size-10 text-white rounded-full leading-10 text-center left-0 top-0"><?php echo svg('arrows-angle-expand', '20', '20') ?></i>
                                     <strong class="font-semibold block">SIZE</strong>1,200m<sup>2</sup>
                                 </div>
                             </div>
                             <div class="sm:col-span-6 col-span-12">
                                 <div class="pl-[55px] mb-7.5 font-semibold relative text-2sm">
                                     <i
-                                        class="flex justify-center items-center absolute bg-primary size-10 text-white rounded-full leading-10 text-center left-0 top-0"><?php echo svg('house', '20', '20') ?></i>
+                                        class="flex justify-center items-center absolute bg-primary size-10 text-white rounded-full leading-10 text-center left-0 top-0"><?php echo svg('houses', '20', '20') ?></i>
                                     <strong class="font-semibold block">TYPE</strong>Residential Project
                                 </div>
                             </div>
@@ -85,7 +86,7 @@ get_header();
                                 <div class="mb-7.5 relative">
                                     <div class="float-left mr-2.5 w-14.5">
                                         <a href="javascript:void(0);" class="icon-cell text-primary">
-                                            <i class="flaticon-factory text-[45px]"></i>
+                                            <i class="text-[45px]"><?php echo svg('houses', '50', '50') ?></i>
                                         </a>
                                     </div>
                                     <div class="overflow-hidden">
@@ -97,7 +98,7 @@ get_header();
                                 <div class="mb-7.5 relative">
                                     <div class="float-left mr-2.5 w-14.5">
                                         <a href="javascript:void(0);" class="icon-cell text-primary">
-                                            <i class="flaticon-settings text-[45px]"></i>
+                                            <i class="text-[45px]"><?php echo svg('gear', '50', '50') ?></i>
                                         </a>
                                     </div>
                                     <div class="overflow-hidden">
@@ -109,7 +110,7 @@ get_header();
                                 <div class="relative">
                                     <div class="float-left mr-2.5 w-14.5">
                                         <a href="javascript:void(0);" class="icon-cell text-primary">
-                                            <i class="flaticon-worker text-[45px]"></i>
+                                            <i class="text-[45px]"><?php echo svg('person', '50', '50') ?></i>
                                         </a>
                                     </div>
                                     <div class="overflow-hidden">

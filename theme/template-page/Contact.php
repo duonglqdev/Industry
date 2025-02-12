@@ -8,165 +8,151 @@ get_header();
 ?>
 
 <div class="page-content bg-white">
-    <!-- Contact Form -->
-    <div class="max2lg:bg-scroll md:pt-20 md:pb-13.5 sm:pb-5 pt-7.5 contact-page-9 relative after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-black/80"
-        style="background-image: url(images/bg5.jpg); background-position: 30% 100%">
-        <div class="container relative z-1">
-            <div class="grid grid-cols-12 gap-x-6">
-                <div class="lg:col-span-4 col-span-12 text-white">
-                    <div class="grid grid-cols-12 gap-x-6">
-                        <div class="lg:col-span-12 col-span-12 mb-7.5">
-                            <div class="bg-white/5 border border-[#505050] p-5 rounded text-sm">
-                                <div class="overflow-hidden">
-                                    <h5 class="text-white">
-                                        <span class="w-10 inline-block text-center text-primary">
-                                            <?php echo svg('geo-alt', '25', '25', 'text-3xl align-middle') ?>
-                                        </span>
-                                        Địa chỉ công ty
-                                    </h5>
-                                    <p class="text-white">007 Dummy Ashoka Apartment, Gautam Marg, Rani Sati
-                                        Nagar,Jaipur / India </p>
-                                    <h6 class="text-white mb-3.75 font-normal"><i class="ti-alarm-clock"></i> Thời gian
-                                        làm việc</h6>
-                                    <p class="text-white mb-0">Mon To Sat - 10.00 - 07.00</p>
-                                    <p class="text-white mb-0">Sunday - Close</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-12 md:col-span-6 col-span-12 mb-7.5">
-                            <div class="bg-white/5 border border-[#505050] p-5 rounded text-sm">
-                                <div class="overflow-hidden">
-                                    <h5 class="text-white">
-                                        <span
-                                            class="w-10 inline-block text-center text-primary"><?php echo svg('envelope', '25', '25', 'text-3xl align-middle') ?></span>
-                                        E-mail
-                                    </h5>
-                                    <p class="mb-0"><a href="mailto:someone@example.com"
-                                            class="text-white">info@example.com</a></p>
-                                    <p class="mb-0"><a href="mailto:someone@example.com"
-                                            class="text-white">hr@example.com</a></p>
-                                    <p class="mb-0"><a href="mailto:someone@example.com"
-                                            class="text-white">support@example.com</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-12 md:col-span-6 col-span-12 mb-7.5">
-                            <div class="bg-white/5 border border-[#505050] p-5 rounded text-sm">
-                                <div class="overflow-hidden">
-                                    <h5 class="text-white">
-                                        <span
-                                            class="w-10 inline-block text-center text-primary"><?php echo svg('phone', '25', '25', 'text-3xl align-middle') ?></span>
-                                        Số điện thoại
-                                    </h5>
-                                    <p class="mb-0"><a href="tel:+4733378901" class="text-white">+00 234 678 9012</a>
-                                    </p>
-                                    <p class="mb-0"><a href="tel:+4733378901" class="text-white">+00 1234 5678 90</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- inner page banner -->
+    <div class="relative table md:h-[220px] h-[180px] w-full after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-black/50 text-center bg-top bg-cover "
+        style="background-image: url('https://industry.dexignzone.com/tailwind/demo/assets/images/banner/bnr3.jpg')">
+        <div class="container relative z-1 table h-full">
+            <div
+                class="lg:flex table-cell items-center justify-between align-middle text-center md:h-[220px] h-[180px] maxmd:py-3.75">
+                <h1
+                    class="font-semibold md:text-[40px] text-2xl lg:mb-0 mb-2.5 text-white maxmd:leading-8 maxmd:text-center">
+                    Contact Us 4</h1>
+                <!-- Breadcrumb row -->
+                <div>
+                    <ul class="flex justify-center items-center">
+                        <li class="mr-[3px] text-white inline-block font-medium ">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <?php echo svg('play-fill', '15', '15', 'text-white') ?>
+                        <li class="mr-[3px] text-white inline-block font-medium">Contact Us 4</li>
+                    </ul>
                 </div>
-                <div class="lg:col-span-8 col-span-12 mb-7.5">
-                    <form class="md:p-7.5 p-5 rounded h-full wow bg-white fadeInUp" data-wow-delay="0.2s">
-                        <h3 class="mb-2.5">Let's Convert Your Idea into Reality <span class="bg-primary"></span></h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the</p>
-                        <div class="grid grid-cols-12 gap-x-6">
-                            <div class="md:col-span-6 col-span-12">
-                                <div class="sm:mb-6.25 mb-2.5">
-                                    <div class="relative flex flex-wrap items-stretch w-full">
-                                        <span
-                                            class="border-b border-black/10 text-lg pt-[9px] pb-[3px] align-top"><?php echo svg('person', '20', '20', 'text-3xl align-middle text-primary') ?></span>
-                                        <input name="dzName" type="text" required=""
-                                            class="w-[1%] flex-auto h-10 py-2 px-3 bg-white outline-none border-b border-black/10"
-                                            placeholder="Họ">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="md:col-span-6 col-span-12">
-                                <div class="sm:mb-6.25 mb-2.5">
-                                    <div class="relative flex flex-wrap items-stretch w-full">
-                                        <span
-                                            class="border-b border-black/10 text-lg pt-[9px] pb-[3px] align-top"><?php echo svg('phone', '20', '20', 'text-3xl align-middle text-primary') ?></span>
-                                        <input name="dzOther[Phone]" type="text" required=""
-                                            class="w-[1%] flex-auto h-10 py-2 px-3 bg-white outline-none border-b border-black/10 dz-number"
-                                            placeholder="Số điện thoại">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-span-12">
-                                <div class="sm:mb-6.25 mb-2.5">
-                                    <div class="relative flex flex-wrap items-stretch w-full">
-                                        <span
-                                            class="border-b border-black/10 text-lg pt-[9px] pb-[3px] align-top"><?php echo svg('envelope', '20', '20', 'text-3xl align-middle text-primary') ?></span>
-                                        <input name="dzEmail" type="email"
-                                            class="w-[1%] flex-auto h-10 py-2 px-3 bg-white outline-none border-b border-black/10"
-                                            required="" placeholder="E-mail">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="md:col-span-6 col-span-12">
-                                <div class="sm:mb-6.25 mb-2.5">
-                                    <div class="relative flex items-stretch w-full flex-nowrap">
-                                        <span
-                                            class="border-b border-black/10 text-lg pt-[9px] pb-[3px] align-top"><?php echo svg('check-square', '20', '20', 'text-3xl align-middle text-primary') ?></span>
-                                        <select
-                                            class="nice-select wide float-none border-0 border-b rounded-none text-base">
-                                            <option>Chọn doanh nghiệp</option>
-                                            <option>Oil/Gas Plant</option>
-                                            <option>Steel Plant</option>
-                                            <option>Factory</option>
-                                            <option>Construct</option>
-                                            <option>Solar Plant</option>
-                                            <option>Food Industry</option>
-                                            <option>Agriculture</option>
-                                            <option>Ship Industry</option>
-                                            <option>Leather Industry</option>
-                                            <option>Nuclear Plant</option>
-                                            <option>Beer Factory</option>
-                                            <option>Mining Industry</option>
-                                            <option>Car Industry</option>
-                                            <option>Plastic Industry</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="md:col-span-6 col-span-12">
-                                <div class="sm:mb-6.25 mb-2.5">
-                                    <div class="relative flex flex-wrap items-stretch w-full">
-                                        <span
-                                            class="border-b border-black/10 text-lg pt-[9px] pb-[3px] align-top"><?php echo svg('file-earmark-arrow-up', '20', '20', 'text-3xl align-middle text-primary') ?></span>
-                                        <input name="dzOther[Subject]" type="file" required=""
-                                            class="w-[1%] flex-auto h-10 py-2 px-3 bg-white outline-none border-b border-black/10 file:border-0 file:bg-[#f8f9fa] file:px-2 file:py-1"
-                                            placeholder="Tải tệp lên">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-span-12">
-                                <div class="sm:mb-6.25 mb-2.5">
-                                    <div class="relative flex flex-wrap items-stretch w-full">
-                                        <span
-                                            class="border-b border-black/10 text-lg pt-[9px] pb-[3px] align-top"><?php echo svg('journal', '20', '20', 'text-3xl align-middle text-primary') ?></span>
-                                        <textarea name="dzMessage" rows="4"
-                                            class="w-[1%] flex-auto h-auto py-2 px-3 bg-white outline-none border-b border-black/10"
-                                            required=""
-                                            placeholder="Nói với chúng tôi về dự án va và ý tưởng của bạn"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-span-12">
-                                <button name="submit" type="submit" value="Submit"
-                                    class="btn btn-md bg-primary text-white hover:bg-primaryhover"> <span>Nhận báo giá
-                                        miễn phí!</span> </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <!-- Breadcrumb row END -->
             </div>
         </div>
     </div>
-    <!-- Contact Form END -->
+    <!-- inner page banner END -->
+    <!-- contact area -->
+    <div class="relative max2lg:bg-scroll md:pt-20 md:pb-13.5 sm:pb-5 pt-7.5 bg-white contact-style-1">
+        <div class="container">
+            <div class="grid grid-cols-12 gap-x-6 dzseth">
+                <div class="lg:col-span-3 sm:col-span-6 col-span-12 mb-7.5">
+                    <div class="px-5 py-7.5 text-center rounded border text-sm h-full">
+                        <div class="w-20 inline-block text-center text-primary mb-5"> <a href="javascript:void(0);"
+                                class="flex justify-center items-center"><?php echo svg('geo-alt', '50', '50', 'text-center') ?></a>
+                        </div>
+                        <div class="overflow-hidden">
+                            <h5 class="uppercase">Địa chỉ</h5>
+                            <p class="mb-0">123 West Street, Melbourne Victoria 3000 Australia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 sm:col-span-6 col-span-12 mb-7.5">
+                    <div class="px-5 py-7.5 text-center rounded border text-sm h-full">
+                        <div class="w-20 inline-block text-center text-primary mb-5"> <a href="javascript:void(0);"
+                                class="flex justify-center items-center"><?php echo svg('envelope', '50', '50', 'text-center') ?></a>
+                        </div>
+                        <div class="overflow-hidden">
+                            <h5 class="uppercase">Email</h5>
+                            <p class="mb-0"><a href="mailto:someone@example.com">info@example.com</a> <br> <a
+                                    href="mailto:someone@example.com">info@example.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 sm:col-span-6 col-span-12 mb-7.5">
+                    <div class="px-5 py-7.5 text-center rounded border text-sm h-full">
+                        <div class="w-20 inline-block text-center text-primary mb-5"> <a href="javascript:void(0);"
+                                class="flex justify-center items-center"><?php echo svg('phone', '50', '50', 'text-center') ?></a>
+                        </div>
+                        <div class="overflow-hidden">
+                            <h5 class="uppercase">SỐ điện thoại</h5>
+                            <p class="mb-0"><a href="tel:+4733378901">+00 1234 5678 90 <br> +00 234 678 9012</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 sm:col-span-6 col-span-12 mb-7.5">
+                    <div class="px-5 py-7.5 text-center rounded border text-sm h-full">
+                        <div class="w-20 inline-block text-center text-primary mb-5"> <a href="javascript:void(0);"
+                                class="flex justify-center items-center"><?php echo svg('pc-display-horizontal', '50', '50', 'text-center') ?></a>
+                        </div>
+                        <div class="overflow-hidden">
+                            <h5 class="uppercase">Fax</h5>
+                            <p class="mb-0"><a href="tel:+4733378901">+00 1234 5678 90 <br> +00 234 678 9012</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 gap-x-6">
+                <!-- Left part start -->
+                <div class="lg:col-span-6 col-span-12 mb-7.5">
+                    <div class="sm:p-7.5 p-5 border rounded">
+                        <h3 class="mb-2.5">Gửi tin nhắn cho chúng tôi</h3>
+                        <div class="dzFormMsg"></div>
+                        <form method="post" class="dzForm" action="script/contact.php">
+                            <input type="hidden" value="Contact" name="dzToDo">
+                            <div class="grid grid-cols-12 gap-x-6">
+                                <div class="col-span-12">
+                                    <div class="sm:mb-6.25 mb-2.5">
+                                        <div class="relative flex flex-wrap items-stretch w-full">
+                                            <input name="dzName" type="text" required=""
+                                                class="w-full h-13.5 py-2.5 px-5 rounded bg-white outline-none border border-black/10 text-sm"
+                                                placeholder="Tên của bạn">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-span-12">
+                                    <div class="sm:mb-6.25 mb-2.5">
+                                        <div class="relative flex flex-wrap items-stretch w-full">
+                                            <input name="dzEmail" type="email"
+                                                class="w-full h-13.5 py-2.5 px-5 rounded bg-white outline-none border border-black/10 text-sm"
+                                                required="" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-span-12">
+                                    <div class="sm:mb-6.25 mb-2.5">
+                                        <div class="relative flex flex-wrap items-stretch w-full">
+                                            <textarea name="dzMessage" rows="4"
+                                                class="w-full h-auto py-2.5 px-5 rounded bg-white outline-none border border-black/10 text-sm"
+                                                required="" placeholder="Lời nhắn..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-span-12">
+                                    <div class="sm:mb-6.25 mb-2.5">
+                                        <div class="relative flex flex-wrap items-stretch w-full">
+                                            <div class="g-recaptcha"
+                                                data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN"
+                                                data-callback="verifyRecaptchaCallback"
+                                                data-expired-callback="expiredRecaptchaCallback"></div>
+                                            <input class="form-control d-none" style="display:none;"
+                                                data-recaptcha="true" required=""
+                                                data-error="Please complete the Captcha">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-span-12">
+                                    <button name="submit" type="submit" value="Submit"
+                                        class="btn bg-primary text-white hover:bg-primaryhover block w-full">
+                                        <span>Gửi</span> </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Left part END -->
+                <!-- right part start -->
+                <div class="lg:col-span-6 col-span-12 mb-7.5 flex">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.3825624477!2d75.65046970649679!3d26.88544791796718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C+Rajasthan!5e0!3m2!1sen!2sin!4v1500819483219"
+                        class="align-self-stretch radius-sm" style="border:0; width:100%;  min-height:100%;"
+                        allowfullscreen=""></iframe>
+                </div>
+                <!-- right part END -->
+            </div>
+        </div>
+    </div>
+    <!-- contact area  END -->
 </div>
 
 <?php
