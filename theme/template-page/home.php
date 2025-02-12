@@ -7,7 +7,7 @@ Template Name: Home
 get_header();
 ?>
 <main>
-    <div class="page-content bg-white">
+    <div class=" bg-white">
         <!-- Main Slider -->
         <div class="main-banner">
             <div class="swiper home-slider2 w-full">

@@ -7,7 +7,7 @@ Template Name: Blog-Detail
 get_header();
 ?>
 
-<div class="page-content bg-white">
+<div class=" bg-white">
     <div class="md:pt-14.5 md:pb-13.5 py-7.5">
         <div class="container">
             <div class="grid grid-cols-12 gap-x-6">
