@@ -284,3 +284,54 @@ function acf_add_allowed_iframe_tag( $tags, $context ) {
 
 	return $tags;
 }
+class Custom_Menu_Walker extends Walker_Nav_Menu {
+    private $menu_images = []; // Mảng lưu ảnh của từng menu item
+
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+        $menu_style = get_field('menu_style', $item);
+        $menu_banner_img = get_field('menu_banner_img', $item); // Lấy ID ảnh
+
+        // Lấy danh sách class của menu item
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+
+        // Chỉ thêm class menu_style vào LI của menu cấp 0
+        if ($depth == 0) {
+            if ($menu_style == 'banner') {
+                $classes[] = 'menu_banner';
+            } elseif ($menu_style == 'grid') {
+                $classes[] = 'menu_grid';
+            } elseif ($menu_style == 'normal') {
+                $classes[] = 'menu_normal';
+            }
+        }
+
+        // Tạo danh sách class
+        $class_names = join(' ', array_filter($classes));
+        $class_attribute = !empty($class_names) ? ' class="' . esc_attr($class_names) . '"' : '';
+
+        // Tạo thẻ <li>
+        $output .= '<li' . $class_attribute . '>';
+
+        // Bắt đầu thẻ <a>
+        $output .= '<a href="' . esc_url($item->url) . '">';
+
+        // Nếu có ảnh, thêm vào bên trong thẻ <a> trước tiêu đề
+        if (!empty($menu_banner_img)) {
+            $image = wp_get_attachment_image($menu_banner_img, 'full', false, [
+                'class' => 'max-lg:hidden',
+            ]);
+            $output .= $image;
+        }
+
+        // Tiêu đề menu
+        $output .= esc_html($item->title);
+
+        // Kết thúc thẻ <a>
+        $output .= '</a>';
+    }
+
+    function end_el(&$output, $item, $depth = 0, $args = null) {
+        $output .= '</li>';
+    }
+}
+

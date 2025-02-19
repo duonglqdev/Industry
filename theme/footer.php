@@ -15,30 +15,33 @@
 	<div
 		class="overflow-hidden relative z-1 after:content-[''] after:bg-[#191f23] after:absolute after:-z-1 after:w-full after:h-17.5 after:left-0 after:bottom-0">
 		<div class="container">
-			<div class="bg-primary rounded-2lg flex maxmd:flex-wrap maxmd:pb-5  wow fadeIn" data-wow-duration="2s"
+			<?php if( have_rows('footer_contact','option') ): ?>
+				<div class="bg-primary rounded-2lg flex maxmd:flex-wrap maxmd:pb-5  wow fadeIn" data-wow-duration="2s"
 				data-wow-delay="0.6s">
+				<?php while( have_rows('footer_contact','option') ): the_row();
+				$type = get_sub_field('type_contact');
+				$icon='';
+				if($type == 'phone'){
+					$icon = 'icon2.png';
+				}else if($type == 'email'){
+					$icon = 'icon3.png';
+				}else if($type == 'address'){
+					$icon = 'icon1.png';
+				}
+				?>
 				<div
 					class="md:flex-[0_0_33.33%] md:max-w-[33.33%] relative lg:py-6.25 lg:pr-5 lg:!pl-28 md:p-5 !pl-[75px] z-1 pt-6.25 pr-5 pb-1.25 group after:content-[''] after:h-full after:w-13.5 after:absolute after:-right-3.75 after:top-0 after:-z-1 after:bg-[url(../images/icon/right.png)] after:bg-contain after:bg-right after:bg-no-repeat after:opacity-50 maxmd:after:hidden">
-					<img src="https://industry.dexignzone.com/tailwind/demo/assets/images/icon/icon1.png" alt=""
-						class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
-					<h4 class="mb-2.5 text-white text-xxl">Address</h4>
-					<p class="mb-0 text-white max2lg:text-sm">8901 Marmora Road Chi Minh City, Vietnam</p>
+
+					
+						<img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/<?= $icon ?>" alt="icon" class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
+
+					<h4 class="mb-2.5 text-white text-xxl"><?php the_sub_field('tilte')  ?></h4>
+					<div class="mb-0 text-white max2lg:text-sm prose-p:text-white"><?php the_sub_field('content')  ?></div>
 				</div>
-				<div
-					class="md:flex-[0_0_33.33%] md:max-w-[33.33%] relative lg:py-6.25 lg:pr-5 lg:!pl-28 md:p-5 !pl-[75px] z-1 pt-6.25 pr-5 pb-1.25 group after:content-[''] after:h-full after:w-13.5 after:absolute after:-right-3.75 after:top-0 after:-z-1 after:bg-[url(../images/icon/right.png)] after:bg-contain after:bg-right after:bg-no-repeat after:opacity-50 maxmd:after:hidden">
-					<img src="https://industry.dexignzone.com/tailwind/demo/assets/images/icon/icon2.png" alt=""
-						class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
-					<h4 class="mb-2.5 text-white text-xxl">Phone</h4>
-					<p class="mb-0 text-white max2lg:text-sm">+00 234 678 9012 <br> +0 1234 5678 90</p>
+				<?php endwhile; ?>
 				</div>
-				<div
-					class="md:flex-[0_0_33.33%] md:max-w-[33.33%] relative lg:py-6.25 lg:pr-5 lg:!pl-28 md:p-5 !pl-[75px] z-1 pt-6.25 pr-5 pb-1.25 group">
-					<img src="https://industry.dexignzone.com/tailwind/demo/assets/images/icon/icon3.png" alt=""
-						class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
-					<h4 class="mb-2.5 text-white text-xxl">Email Contact</h4>
-					<p class="mb-0 text-white max2lg:text-sm">info@example.com <br> company@gmail.com</p>
-				</div>
-			</div>
+			<?php endif; ?>
+			
 		</div>
 	</div>
 	<!-- footer top part -->

@@ -15,6 +15,26 @@
     },
   });
 
-
+	function menuMobile() {
+   
+    $(".navbar-nav li.menu-item-has-children>ul").before(
+      `<span class="li-plus"></span>`
+    );
+  
+    if ($(".li-plus").length) {
+      $(".li-plus").click(function (e) {
+        $(this).toggleClass("clicked");
+        $(this).next(".sub-menu").slideToggle(200);
+        $(this)
+          .parent()
+          .siblings()
+          .find(".li-plus")
+          .removeClass("clicked")
+          .siblings(".sub-menu")
+          .slideUp();
+      });
+    }
+  }
+  menuMobile();
 
 })();
