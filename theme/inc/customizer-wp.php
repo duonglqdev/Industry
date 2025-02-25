@@ -335,3 +335,4 @@ class Custom_Menu_Walker extends Walker_Nav_Menu {
     }
 }
 
+add_filter('wpcf7_autop_or_not', '__return_false');

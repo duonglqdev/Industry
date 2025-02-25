@@ -2179,10 +2179,7 @@
     border-width: 12px 14px 12px 0;
   }
   
-  .acod-head.active a::after{
-    --tw-content: '\e622';
-    content: var(--tw-content);
-  }
+ 
   
   .dzSubscribeMsg p{
     margin-bottom: 0.25rem;

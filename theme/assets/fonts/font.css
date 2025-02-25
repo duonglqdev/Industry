@@ -1,5 +1,25 @@
 @font-face {
-    font-family: "SVN-Poppins";
-    src: url(./SVN-PoppinsRegular.ttf);
+    font-family: "Manrope";
+    src: url(./Manrope-Regular.ttf);
     font-weight: 400;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(./Manrope-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(./Manrope-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(./Manrope-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(./Manrope-ExtraBold.ttf);
+    font-weight: 800;
 }

@@ -7,7 +7,7 @@ Template Name: About
 get_header();
 ?>
 <main>
-    <div class="page-content bg-white">
+    
         <!-- inner page banner -->
         <div class="relative table md:h-[220px] h-[180px] w-full after:content-[''] after:absolute after:left-0 after:top-0 after:size-full after:bg-black/50 text-center bg-top bg-cover"
             style="background-image: url('https://industry.dexignzone.com/tailwind/demo/assets/images/banner/bnr3.jpg')">
@@ -220,7 +220,7 @@ get_header();
             </div>
         </div>
         <!-- contact area END -->
-    </div>
+    
 </main>
 
 <?php

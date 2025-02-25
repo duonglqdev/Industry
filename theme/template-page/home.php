@@ -503,7 +503,7 @@ get_header();
                 </div>
             </div>
             <!-- About us END -->
-            <?php echo svg('', '', '', '') ?>
+           
 
             <!-- Team member -->
             <div class="relative max2lg:bg-scroll bg-gray-100 md:pt-20 md:pb-13.5 sm:pb-5 pt-7.5">

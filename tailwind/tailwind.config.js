@@ -19,7 +19,7 @@ module.exports = {
 				secondary: '#f47514',
 			},
 			fontFamily: {
-				body: ['SVN-Poppins', 'sans-serif'],
+				body: ['Manrope', 'sans-serif'],
 			},
 			margin: {
 				7.5: '30px',

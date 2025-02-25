@@ -114,23 +114,27 @@ function svgpath($name, $width = false, $height = false, $class = '')
 /**
  * Function help call file SVG from url
  */
-function svg_dir($path, $width = false, $height = false)
+function svg_dir($path, $width = false, $height = false, $class = '')
 {
-	if ($path) {
-		$svg = file_get_contents($path);
-		if ($width) {
-			$size = '<svg';
-			$new_size = '<svg width="' . $width . 'px"';
-			$svg = str_replace($size, $new_size, $svg);
-		}
-		if ($height) {
-			$size = '<svg';
-			$new_size = '<svg height="' . $height . 'px"';
-			$svg = str_replace($size, $new_size, $svg);
-		}
-		return $svg;
-	}
-	return '';
+    if ($path) {
+        $svg = file_get_contents($path);
+        if ($svg) {
+            // Thêm width nếu có
+            if ($width) {
+                $svg = preg_replace('/<svg/', '<svg width="' . $width . 'px"', $svg, 1);
+            }
+            // Thêm height nếu có
+            if ($height) {
+                $svg = preg_replace('/<svg/', '<svg height="' . $height . 'px"', $svg, 1);
+            }
+            // Thêm class nếu có
+            if (!empty($class)) {
+                $svg = preg_replace('/<svg/', '<svg class="' . esc_attr($class) . '"', $svg, 1);
+            }
+            return $svg;
+        }
+    }
+    return '';
 }
 
 if (!function_exists('gnws_post_thumbnail')) :

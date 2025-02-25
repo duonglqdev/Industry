@@ -22,10 +22,10 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('font-body'); ?>>
 
 	<?php wp_body_open(); ?>
-	<header class="relative z-99999 block header">
+	<header class="relative z-99999 block header ">
 		<div class="bg-white border-b border-black/5 max-md:py-1.25 top-bar">
 			<div class="container">
 				<div class="row flex flex-wrap md:justify-between justify-center items-center">

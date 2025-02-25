@@ -170,8 +170,9 @@ function gnws_scripts()
 		wp_enqueue_style('gnws-woo', get_template_directory_uri() . '/css/woocommerce.min.css', array(), GNWS_VERSION);
 	}
 	if (class_exists('WPCF7')) {
+		wp_enqueue_style( 'gnws-alert', get_template_directory_uri() . '/assets/alert/css/cf7simplepopup-core.css', array(), GNWS_VERSION );
 		wp_enqueue_script('gnws-jquery_alert', get_template_directory_uri() . '/assets/alert/js/cf7simplepopup-core.js', array(), GNWS_VERSION, true);
-		wp_enqueue_script('gnws-jquery_alert_main', get_template_directory_uri() . '/assets/alert/js/sweetalert2.all.min.js', array(), GNWS_VERSION, true);
+		wp_enqueue_script('gnws-jquery_alert_main', get_template_directory_uri() . '/assets/alert/js/sweetalert.js', array(), GNWS_VERSION, true);
 	}
 	wp_enqueue_style('gnws-fancybox', get_template_directory_uri() . '/assets/lib/jquery.fancybox.css');
 	wp_enqueue_style('gnws-swiper', get_template_directory_uri() . '/assets/lib/swiper-bundle.min.css');
@@ -194,7 +195,7 @@ function gnws_scripts()
 	wp_enqueue_script('gnws-js-fancybox', get_template_directory_uri() . '/assets/lib/jquery.fancybox.js', array(), GNWS_VERSION, true);
 	wp_enqueue_script('gnws-js-counterup', get_template_directory_uri() . '/assets/lib/counterup.min.js', array(), GNWS_VERSION, true);
 	wp_enqueue_script('gnws-js-custom', get_template_directory_uri() . '/assets/lib/custom.js', array(), GNWS_VERSION, true);
-	wp_enqueue_script('gnws-js-dz', get_template_directory_uri() . '/assets/lib/dz.ajax.js', array(), GNWS_VERSION, true);
+	
 	wp_enqueue_script('gnws-js-carousel', get_template_directory_uri() . '/assets/lib/dz.carousel.js', array(), GNWS_VERSION, true);
 	wp_enqueue_script('gnws-js-imagesloaded', get_template_directory_uri() . '/assets/lib/imagesloaded.js', array(), GNWS_VERSION, true);
 	wp_enqueue_script('gnws-js-countdown', get_template_directory_uri() . '/assets/lib/jquery.countdown.js', array(), GNWS_VERSION, true);
