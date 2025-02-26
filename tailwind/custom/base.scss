@@ -149,3 +149,52 @@
         @apply text-white font-semibold;
     }
 }
+.form_contact{
+    h3{
+        @apply font-bold text-xl mb-3;
+    }
+    .form-group{
+        @apply mb-3;
+        input{
+            @apply w-full h-13.5 py-2.5 px-5 rounded bg-white outline-none border border-black/10 text-sm focus:ring-0;
+        }
+        textarea{
+            @apply w-full py-2.5 px-5 rounded bg-white outline-none border border-black/10 text-sm focus:ring-0 h-28;
+        }
+    }
+    input[type="submit"]{
+        @apply bg-primary text-white block w-full text-center cursor-pointer transition-all duration-500 hover:opacity-90 font-bold text-lg btn;
+    }
+}
+.contact-map{
+    iframe{
+        @apply block size-full max-h-full min-w-full;
+    }
+}
+.error404{
+    header,footer{
+        @apply hidden;
+    }
+}
+
+/* Error */
+
+.dz_error-405 .dz_error{
+    color: #dfdfdf;
+    font-size: 200px;
+    font-weight: 700;
+	line-height: 200px;
+}
+.dz_error-404 .error-head{
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+.dz_error-405 .error-head{
+    font-size: 50px;
+    font-weight: 700;
+}
+.dz_error-405 .error-content{
+	font-size: 21px;
+	font-weight: 500;
+}

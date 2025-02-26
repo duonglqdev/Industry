@@ -10,13 +10,13 @@
                             <?php if( get_sub_field('title') ): ?>
                               
                                 <h2
-                                    class="font-semibold xl:text-[90px]/[90px] sm:text-[67px]/[61px] text-3xl/9 mb-1.5 text-white">
+                                    class="font-semibold xl:text-[90px]/[90px] sm:text-[67px]/[61px] text-3xl/9 mb-4 text-white">
                                     <?php the_sub_field('title'); ?></h2>
                             <?php endif; ?>
                             <?php if( get_sub_field('desc') ): ?>
                                 
                                 <div
-                                    class="text-white/50 md:inline-block tracking-[1px] text-2sm/6 font-raleway font-medium max-w-[400px] md:m-0">
+                                    class="text-white/50 md:inline-block tracking-[1px] text-2sm/6 font-medium max-w-[400px] md:mb-0 mb-4">
                                     <?php the_sub_field('desc'); ?>
                                 </div>
                             <?php endif; ?>

@@ -24,7 +24,7 @@
 
 					if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) :
 						?>
-						<ul class="filters flex flex-wrap mx-2.5" data-bs-toggle="buttons">
+						<ul class="filter_container-nav flex flex-wrap mx-2.5" data-bs-toggle="buttons">
 							<?php
 							$i = 0;
 							foreach ( $terms as $term ) :
@@ -33,8 +33,8 @@
 								$image = get_field( 'pj_cat_image', 'project_cat_' . $term->term_id );
 								$image_url = wp_get_attachment_image_url( $image, 'full' );
 								?>
-								<li data-filter="<?php echo esc_attr( $term->slug ); ?>"
-									class="lg:w-1/4 w-1/2 px-2.5 inline-block <?php echo $i == 1 ? 'active' : ''; ?>">
+								<li data-filter=".<?php echo esc_attr( $term->slug ); ?>"
+									class="lg:w-1/4 w-1/2 px-2.5 inline-block cursor-pointer <?php echo $i == 1 ? 'active' : ''; ?>">
 
 									<a class="w-full flex py-3 px-2.5 gap-3 lg:text-xl text-lg border-b-3 border-[#eee] items-center justify-center font-roboto-condensed relative after:content-[''] after:h-[3px] after:bg-primary after:w-0 after:absolute after:-bottom-[3px] after:-right-px after:duration-700"
 										href="javascript:void(0);">
@@ -62,7 +62,7 @@
 			?>
 			<div class="row !pl-0 sp10">
 				<div class="w-full">
-					<ul id="masonry" class="dlab-gallery-listing gallery mfp-gallery text-center">
+					<ul  class="dlab-gallery-listing gallery mfp-gallery text-center filter_wrap">
 						<?php while ( $query->have_posts() ) :
 							$query->the_post();
 							// Lấy danh sách terms của taxonomy "project_cat"
@@ -75,7 +75,7 @@
 								$filter_classes = implode( ' ', $term_slugs ); // Gộp các slug thành chuỗi
 							}
 							?>
-							<li class="card-container lg:w-1/3 sm:w-1/2 w-full px-[5px] <?php echo esc_attr( $filter_classes ); ?>"
+							<li class="card-container filter_wrap-item lg:w-1/3 sm:w-1/2 w-full px-[5px] <?php echo esc_attr( $filter_classes ); ?>"
 								data-filter="<?php echo esc_attr( $filter_classes ); ?>">
 
 								<?php get_template_part( 'template-parts/content', get_post_type() ); ?>

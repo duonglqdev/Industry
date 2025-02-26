@@ -11,47 +11,82 @@
 
 ?>
 <footer class="text-[#b0b0b0]">
-	<div
-		class="overflow-hidden relative z-1 after:content-[''] after:bg-[#191f23] after:absolute after:-z-1 after:w-full after:h-17.5 after:left-0 after:bottom-0">
-		<div class="container">
-			<?php if ( have_rows( 'footer_contact', 'option' ) ) : ?>
-				<div class="bg-primary rounded-2lg flex maxmd:flex-wrap maxmd:pb-5  wow fadeIn"
-					data-wow-duration="2s" data-wow-delay="0.6s">
-					<?php while ( have_rows( 'footer_contact', 'option' ) ) :
-						the_row();
-						$type = get_sub_field( 'type_contact' );
-						$icon = '';
-						if ( $type == 'phone' )
-						{
-							$icon = 'icon2.png';
-						} else if ( $type == 'email' )
-						{
-							$icon = 'icon3.png';
-						} else if ( $type == 'address' )
-						{
-							$icon = 'icon1.png';
-						}
-						?>
-						<div
-							class="md:flex-[0_0_33.33%] md:max-w-[33.33%] relative lg:py-6.25 lg:pr-5 lg:!pl-28 md:p-5 !pl-[75px] z-1 pt-6.25 pr-5 pb-1.25 group after:content-[''] after:h-full after:w-13.5 after:absolute after:-right-3.75 after:top-0 after:-z-1 after:bg-[url(../images/icon/right.png)] after:bg-contain after:bg-right after:bg-no-repeat after:opacity-50 maxmd:after:hidden">
-
-
-							<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/<?= $icon ?>"
-								alt="icon"
-								class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
-
-							<h4 class="mb-2.5 text-white text-xxl"><?php the_sub_field( 'tilte' ) ?></h4>
-							<div class="mb-0 text-white max2lg:text-sm prose-p:text-white">
-								<?php the_sub_field( 'content' ) ?>
+	<?php if ( is_singular( 'service' ) || is_singular( 'project' ) || is_singular('post') ) : ?>
+		<?php if ( have_rows( 'ns_post_contact','option' ) ) : ?>
+			<div class="relative max2lg:bg-scroll pt-13.5 pb-5 bg-primary wow fadeIn animated"
+				data-wow-duration="2s" data-wow-delay="0.6s"
+				style="visibility: visible; animation-duration: 2s; animation-delay: 0.6s;">
+				<div class="container">
+					<div class="grid grid-cols-12 gap-x-6">
+						<?php while ( have_rows( 'ns_post_contact','option' ) ) :
+							the_row();
+							$icon= get_sub_field('icon');
+							?>
+							<div class="lg:col-span-3 sm:col-span-6 col-span-12 mb-7.5">
+								<div
+									class="relative bg-white overflow-hidden border border-white/15 p-5 rounded group h-full">
+									<div>
+										<h5 class="text-black font-bold text-lg mb-2">
+											<span class="-bottom-2 opacity-15 absolute right-0 w-auto z-[2] pointer-events-none duration-700 group-hover:[transform:scale(1.5)_rotate(20deg)]">
+												 <?php echo svg($icon, '90','90') ?>
+												</span>
+											<?php the_sub_field('title')  ?>
+										</h5>
+										<div class="text-sm text-black/70 mb-0">
+										<?php the_sub_field('content')  ?>
+										</div>
+									</div>
+								</div>
 							</div>
-						</div>
-					<?php endwhile; ?>
+						<?php endwhile; ?>
+					</div>
 				</div>
-			<?php endif; ?>
+			</div>
+		<?php endif; ?>
+	<?php else : ?>
+		<div
+			class="overflow-hidden relative z-1 after:content-[''] after:bg-[#191f23] after:absolute after:-z-1 after:w-full after:h-17.5 after:left-0 after:bottom-0">
+			<div class="container">
+				<?php if ( have_rows( 'footer_contact', 'option' ) ) : ?>
+					<div class="bg-primary rounded-2lg flex maxmd:flex-wrap maxmd:pb-5  wow fadeIn"
+						data-wow-duration="2s" data-wow-delay="0.6s">
+						<?php while ( have_rows( 'footer_contact', 'option' ) ) :
+							the_row();
+							$type = get_sub_field( 'type_contact' );
+							$icon = '';
+							if ( $type == 'phone' )
+							{
+								$icon = 'icon2.png';
+							} else if ( $type == 'email' )
+							{
+								$icon = 'icon3.png';
+							} else if ( $type == 'address' )
+							{
+								$icon = 'icon1.png';
+							}
+							?>
+							<div
+								class="md:flex-[0_0_33.33%] md:max-w-[33.33%] relative lg:py-6.25 lg:pr-5 lg:!pl-28 md:p-5 !pl-[75px] z-1 pt-6.25 pr-5 pb-1.25 group after:content-[''] after:h-full after:w-13.5 after:absolute after:-right-3.75 after:top-0 after:-z-1 after:bg-[url(../images/icon/right.png)] after:bg-contain after:bg-right after:bg-no-repeat after:opacity-50 maxmd:after:hidden">
 
+
+								<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/<?= $icon ?>"
+									alt="icon"
+									class="2lg:size-14 size-9 absolute lg:left-10 left-6.25 top-9 duration-700 group-hover:scale-125">
+
+								<h4 class="mb-2.5 text-white text-xxl"><?php the_sub_field( 'tilte' ) ?></h4>
+								<div class="mb-0 text-white max2lg:text-sm prose-p:text-white">
+									<?php the_sub_field( 'content' ) ?>
+								</div>
+							</div>
+						<?php endwhile; ?>
+					</div>
+				<?php endif; ?>
+
+			</div>
 		</div>
-	</div>
-	<!-- footer top part -->
+	<?php endif; ?>
+
+
 	<?php
 	$bg = get_field( 'ft_bg', 'option' );
 	?>
@@ -139,7 +174,7 @@
 		<div class="container">
 			<div class="flex justify-between maxsm:items-center">
 				<?php if ( get_field( 'footer_logo', 'option' ) ) : ?>
-					
+
 					<a href="<?php echo get_home_url() ?>" class="bg-primary py-2.5 px-5 inline-block">
 						<?php echo wp_get_attachment_image( get_field( 'footer_logo', 'option' ), 'full', '', [ 'class' => 'sm:h-13.5 h-7.5 object-contain sm:max-w-[170px] max-w-[100px]' ] ) ?>
 					</a>
@@ -150,11 +185,11 @@
 						<ul class="inline-block text-center">
 							<?php while ( have_rows( 'footer_social', 'option' ) ) :
 								the_row();
-								$icon=get_sub_field('select_mxh');
+								$icon = get_sub_field( 'select_mxh' );
 								?>
 								<li class="inline-block">
 									<a class="flex justify-center items-center group border-l border-[#303639] sm:w-14.5 sm:h-17.5 size-10 sm:text-xl/[70px] text-base/10 duration-700 hover:text-primary"
-										href="javascript:void(0);"><?php echo svg($icon, '', '', 'md:w-5 md:h-5 w-4 h-4 group-hover:text-primary' ) ?></a>
+										href="javascript:void(0);"><?php echo svg( $icon, '', '', 'md:w-5 md:h-5 w-4 h-4 group-hover:text-primary' ) ?></a>
 								</li>
 							<?php endwhile; ?>
 						</ul>

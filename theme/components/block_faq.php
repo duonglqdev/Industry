@@ -12,7 +12,7 @@
 	<div class="grid grid-cols-12 gap-x-6">
 		<div class="lg:col-span-6 col-span-12 mb-7.5">
 			<div class="relative">
-				<a class="absolute top-1/2 left-1/2 [transform:translate(-50%,_-50%)] popup-youtube"
+				<a class="absolute top-1/2 left-1/2 [transform:translate(-50%,_-50%)]"data-fancybox
 					href="<?php echo check_link(get_sub_field('video_link')) ?>">
 					<?php echo svg( 'play-fill', '50', '50', 'text-white' ) ?></a>
                      <?php echo wp_get_attachment_image(get_sub_field('img'), 'full','',['class'=>'size-full rounded']) ?>

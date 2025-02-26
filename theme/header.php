@@ -13,7 +13,7 @@
 
 
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="scroll-smooth scroll-pt-10">
 
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -115,8 +115,7 @@
 								class="p-3.75 pr-14.5 w-full h-[90px] bg-transparent text-white text-xl border-b-2 border-white/20 outline-none"
 								placeholder="Type to search">
 							<span id="quik-search-remove"
-								class="absolute right-3.75 top-1/2 -my-3.75 h-6.25 text-xl cursor-pointer text-white/20"><i
-									class="ti-close"></i></span>
+								class="absolute right-3.75 top-1/2 -my-3.75 h-6.25 text-xl cursor-pointer text-white/20"> <?php echo svg('close', '16','16') ?></span>
 						</form>
 					</div>
 					

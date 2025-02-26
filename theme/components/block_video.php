@@ -13,7 +13,7 @@ $bg = get_sub_field( 'bg_img' );
 						<?php if( get_sub_field('video_link') ): ?>
                             <div
                                 class="absolute z-2 top-1/2 left-1/2 [transform:translate(-50%,_-50%)]">
-                                <a href="<?php the_sub_field('video_link'); ?>"
+                                <a href="<?php the_sub_field('video_link'); ?>" data-fancybox
                                     class="relative popup-youtube video bg-primary size-20 rounded-full text-center leading-[80px] text-white shadow-[0_0_0_10px_rgba(238,_49,_49,_0.2)] block text-[28px] m-auto duration-500"><?php echo svg( 'play-fill', '30', '30', 'absolute top-1/2 left-1/2 [transform:translate(-50%,_-50%)]' ) ?></a>
                             </div>
                         <?php endif; ?>

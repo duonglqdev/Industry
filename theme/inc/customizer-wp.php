@@ -118,8 +118,8 @@ function my_acf_op_init()
         'parent_slug' => 'themes.php',
     ));
     acf_add_options_sub_page(array(
-        'page_title'  => 'Script',
-        'menu_title'  => 'Script',
+        'page_title'  => 'Cài đặt chung',
+        'menu_title'  => 'Cài đặt chung',
         'parent_slug' => 'themes.php',
     ));
 }

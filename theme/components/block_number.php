@@ -38,8 +38,8 @@ $bg = get_sub_field( 'bg_img' );
                                         <?php if( get_sub_field('number') ): ?>
                                            
                                             <h3
-                                                class="md:text-6xl/[60px] text-4xl/[46px] font-semibold tracking-[3px] md:mb-2.5 mb-1.25 text-white counter">
-                                                <?php the_sub_field('number'); ?>
+                                                class="md:text-6xl/[60px] text-4xl/[46px] font-semibold tracking-[3px] md:mb-2.5 mb-1.25 text-white counter-block" data-count="<?php the_sub_field('number'); ?>">
+                                               0
                                             </h3>
                                         <?php endif; ?>
                                         <?php if( get_sub_field('title') ): ?>

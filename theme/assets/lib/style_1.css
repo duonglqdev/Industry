@@ -1217,8 +1217,7 @@
   p{
     margin-bottom: 1.5rem;
     line-height: 1.75rem;
-    --tw-text-opacity: 1;
-    color: rgb(111 111 111 / var(--tw-text-opacity, 1));
+ 
   }
   
   input::-webkit-outer-spin-button,
