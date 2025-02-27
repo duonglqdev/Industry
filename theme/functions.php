@@ -190,7 +190,7 @@ function gnws_scripts()
 	wp_enqueue_script('gnws-js-carousel', get_template_directory_uri() . '/assets/lib/dz.carousel.js', array(), GNWS_VERSION, true);
 
 
-	wp_enqueue_script('gnws-js-isotope', get_template_directory_uri() . '/assets/lib/isotope.pkgd.min.js', array(), GNWS_VERSION, true);
+	wp_enqueue_script('gnws-js-isotope', get_template_directory_uri() . '/assets/lib/isotope.pkgd.js', array(), GNWS_VERSION, true);
 	wp_enqueue_script('gnws-js-owlCarousel', get_template_directory_uri() . '/assets/lib/owl.carousel.js', array(), GNWS_VERSION, true);
 	
 	wp_enqueue_script('gnws-js-wow', get_template_directory_uri() . '/assets/lib/wow.js', array(), GNWS_VERSION, true);
