@@ -8,7 +8,6 @@
 		handleSlider();
 		openMobileNav();
 		openContent();
-		resizeTable();
 		new WOW().init();
 	});
 
@@ -181,31 +180,5 @@
 		});
 
 		$('.acod-head.default-open').addClass('active').next().show();
-	}
-
-	function resizeTable() {
-		document.querySelectorAll('th').forEach((th) => {
-			let resizer = document.createElement('div');
-			resizer.classList.add('resizer');
-			th.appendChild(resizer);
-
-			resizer.addEventListener('mousedown', function (event) {
-				let startX = event.clientX;
-				let startWidth = th.offsetWidth;
-
-				function resize(event) {
-					let newWidth = startWidth + (event.clientX - startX);
-					th.style.width = newWidth + 'px';
-				}
-
-				function stopResize() {
-					document.removeEventListener('mousemove', resize);
-					document.removeEventListener('mouseup', stopResize);
-				}
-
-				document.addEventListener('mousemove', resize);
-				document.addEventListener('mouseup', stopResize);
-			});
-		});
 	}
 })();
