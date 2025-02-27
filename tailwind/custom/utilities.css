@@ -11,6 +11,15 @@
     font-size: 16px;
 }
 
+.the_content h1 {
+    color: #232323;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
 .the_content .has-drop-cap {
     margin-bottom: 50px;
 }
@@ -20,7 +29,7 @@
 .the_content h4,
 .the_content h5,
 .the_content h6 {
-    color: #3b3663;
+    color: #232323;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -31,6 +40,9 @@
 
 .the_content h5 {
     font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-bottom: 0.625rem;
 }
 
 .the_content h4 {
@@ -47,10 +59,10 @@
 }
 
 .the_content p {
-    color: #333;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    font-size: 16px;
+    color: #999;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 15px;
 }
 
 .the_content ul {
@@ -60,7 +72,7 @@
 }
 
 .the_content ul li {
-    color: #333;
+    color: #666;
     line-height: 1.5;
     margin-bottom: 10px;
     font-size: 16px;
@@ -91,17 +103,43 @@
 }
 
 .the_content blockquote {
-    padding: 10px 20px;
-    margin: 0 0 20px;
-    border-left: 5px solid #6254e7;
+    background-color: #f6f6f6;
+    margin: 2.5rem 0;
+    border-left: 5px solid #ff5e14;
 }
 
 .the_content blockquote p {
     margin: 0 !important;
+    padding: 16px 20px 16px 80px;
+    color: #555;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 30px;
 }
 
 pre.wp-block-code {
     margin-bottom: 30px;
+}
+
+.the_content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.the_content th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.the_content tbody tr:first-child td {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.the_content td {
+    text-align: left;
 }
 
 .the_content table:not(.shop_table) > tbody > tr > td,

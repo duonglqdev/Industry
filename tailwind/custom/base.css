@@ -114,7 +114,8 @@
   @apply absolute right-0 w-14 h-full;
 }
 
-.rank-math-breadcrumb a, .rank-math-breadcrumb p {
+.rank-math-breadcrumb a,
+.rank-math-breadcrumb p {
   @apply text-white font-semibold;
 }
 
@@ -138,8 +139,17 @@
   @apply block size-full max-h-full min-w-full;
 }
 
-.error404 header, .error404 footer {
+.error404 header,
+.error404 footer {
   @apply hidden;
+}
+
+.footer-content::after {
+  background-image: url(../theme/assets/images/right.png);
+}
+
+.top-footer .footer-content:last-child::after {
+  background-image: none;
 }
 
 /* Error */
@@ -164,6 +174,35 @@
 .dz_error-405 .error-content {
   font-size: 21px;
   font-weight: 500;
+}
+
+.home-slider2 {
+  position: relative;
+}
+.home-slider2 > .owl-dots {
+  position: absolute;
+  display: flex;
+  gap: 8px;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  background-color: transparent !important;
+}
+.home-slider2 > .owl-dots > .owl-dot {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: solid;
+  border-width: 2px !important;
+  border-radius: 50%;
+  --tw-border-opacity: 1;
+  border-color: white !important;
+  background-color: transparent;
+  opacity: 1;
+}
+.home-slider2 > .owl-dots > .owl-dot.active {
+  background-color: white;
 }
 
 /*# sourceMappingURL=base.css.map */
