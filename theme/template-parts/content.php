@@ -12,10 +12,10 @@
 				<ul>
 					<li
 						class="inline-block text-primary font-semibold text-2xs uppercase after:content-['|'] after:inline-block after:font-normal after:ml-1.25 after:opacity-50">
-						<strong class="font-semibold"><?php echo get_the_date( 'd/m/y' ) ?></strong>
+						<strong class="font-semibold"><?php echo get_the_date('d/m/y') ?></strong>
 					</li>
 					<li class="inline-block text-primary font-semibold text-2xs uppercase">
-						By <?php the_author(); ?>
+						Bởi <?php the_author(); ?>
 					</li>
 				</ul>
 			</div>
@@ -25,9 +25,9 @@
 				</h3>
 			</div>
 			<div class="mt-3.75">
-				<a href="<?php echo the_permalink() ?>" title="<?php _e( 'Đọc thêm', 'gnws' ) ?>"
+				<a href="<?php echo the_permalink() ?>" title="<?php _e('Đọc thêm', 'gnws') ?>"
 					class="btn bg-primary relative overflow-hidden z-1 after:content-[''] after:absolute after:top-0 after:left-0 after:size-full after:-z-1 after:bg-primaryhover after:duration-300 after:-translate-x-full hover:after:translate-x-0 after:delay-200 before:content-[''] before:absolute before:top-0 before:left-0 before:size-full before:-z-1 before:bg-black/50 before:duration-300 before:-translate-x-full hover:before:translate-x-0">
-					<?php _e( 'Đọc thêm', 'gnws' ) ?>
+					<?php _e('Đọc thêm', 'gnws') ?>
 				</a>
 			</div>
 		</div>

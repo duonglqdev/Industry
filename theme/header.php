@@ -114,7 +114,7 @@
 							class="w-full max-w-25 m-auto relative top-1/2 duration-500 -translate-y-1/2 opacity-0">
 							<input name="search" value="" type="text"
 								class="p-3.75 pr-14.5 w-full h-[90px] bg-transparent text-white text-xl border-b-2 border-white/20 outline-none"
-								placeholder="Type to search">
+								placeholder="Nhập để tìm kiếm">
 							<span id="quik-search-remove"
 								class="absolute right-3.75 top-1/2 -my-3.75 h-6.25 text-xl cursor-pointer text-white/20">
 								<?php echo svg('close', '16', '16') ?></span>

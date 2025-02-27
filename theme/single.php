@@ -23,7 +23,7 @@ get_header();
 									<strong class="font-semibold"><?php echo get_the_date('d/m/y') ?></strong>
 								</li>
 								<li class="inline-block text-primary font-semibold text-2xs uppercase">
-									By <?php the_author() ?> </li>
+									Bởi <?php the_author() ?> </li>
 							</ul>
 						</div>
 						<div class="mb-1.25">
