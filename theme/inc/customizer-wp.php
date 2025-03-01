@@ -334,76 +334,116 @@ class Custom_Menu_Walker extends Walker_Nav_Menu {
 
 add_filter('wpcf7_autop_or_not', '__return_false');
 
-// Xóa slug khỏi URL của post type
-function giniit_remove_multiple_slugs($post_link, $post) {
-    $post_types = array('service', 'project'); // Danh sách post type cần xóa slug
 
-    if (!in_array(get_post_type($post), $post_types) || 'publish' != $post->post_status) {
+
+/*
+ * 1. Xoá slug trong URL cho post type "project" và "service"
+ */
+function remove_project_service_slug( $post_link, $post ) {
+    if ( ! in_array( get_post_type( $post ), array( 'project', 'service' ) ) || 'publish' != $post->post_status ) {
         return $post_link;
     }
-
-    return str_replace('/' . get_post_type($post) . '/', '/', $post_link);
+    // Xoá slug của post type khỏi URL
+    $post_link = str_replace( '/' . get_post_type( $post ) . '/', '/', $post_link );
+    return $post_link;
 }
-add_filter('post_type_link', 'giniit_remove_multiple_slugs', 10, 2);
+add_filter( 'post_type_link', 'remove_project_service_slug', 10, 2 );
 
-// Xóa slug khỏi URL của taxonomy
-function giniit_remove_taxonomy_slug($termlink, $term, $taxonomy) {
-    $taxonomies = array('service_cat', 'project_cat'); // Danh sách taxonomy cần xóa slug
-
-    if (in_array($taxonomy, $taxonomies)) {
-        return str_replace('/' . $taxonomy . '/', '/', $termlink);
+/*
+ * 2. Thêm rewrite rules cho post type "project" và "service"
+ */
+function remove_slug_rewrite_rules( $flash = false ) {
+    global $wp_post_types, $wpdb;
+    $siteLink = esc_url( home_url( '/' ) );
+    $post_types = array( 'project', 'service' );
+    
+    foreach ( $wp_post_types as $type => $custom_post ) {
+        if ( in_array( $type, $post_types ) ) {
+            if ( $custom_post->_builtin == false ) {
+                $querystr = "SELECT {$wpdb->posts}.post_name, {$wpdb->posts}.ID
+                             FROM {$wpdb->posts} 
+                             WHERE {$wpdb->posts}.post_status = 'publish' 
+                             AND {$wpdb->posts}.post_type = '{$type}'";
+                $posts = $wpdb->get_results( $querystr, OBJECT );
+                if ( $posts ) {
+                    foreach ( $posts as $post ) {
+                        $current_slug = get_permalink( $post->ID );
+                        $base = str_replace( $siteLink, '', $current_slug );
+                        add_rewrite_rule( $base . '?$', "index.php?{$custom_post->query_var}={$post->post_name}", 'top' );
+                    }
+                }
+            }
+        }
     }
-
-    return $termlink;
-}
-add_filter('term_link', 'giniit_remove_taxonomy_slug', 10, 3);
-
-// Thêm rewrite rules để hỗ trợ truy cập mà không có slug
-function giniit_rewrite_rules() {
-    global $wp_rewrite;
-
-    $post_types = array('service', 'project');
-    $taxonomies = array('service_cat', 'project_cat');
-
-    // Rewrite rules cho post type
-    foreach ($post_types as $post_type) {
-        add_rewrite_rule(
-            "([^/]+)?$",
-            "index.php?post_type={$post_type}&name=\$matches[1]",
-            'top'
-        );
-    }
-
-    // Rewrite rules cho taxonomy
-    foreach ($taxonomies as $taxonomy) {
-        add_rewrite_rule(
-            "([^/]+)?$",
-            "index.php?{$taxonomy}=\$matches[1]",
-            'top'
-        );
-    }
-
-    $wp_rewrite->flush_rules();
-}
-add_action('init', 'giniit_rewrite_rules');
-
-// Cập nhật rewrite rules khi thêm mới bài viết hoặc taxonomy
-function giniit_update_rewrite_on_new_post($post_id) {
-    $post_type = get_post_type($post_id);
-    $post_types = array('service', 'project');
-
-    if (in_array($post_type, $post_types)) {
-        giniit_rewrite_rules();
+    if ( $flash === true ) {
+        flush_rewrite_rules( false );
     }
 }
-add_action('wp_insert_post', 'giniit_update_rewrite_on_new_post');
+add_action( 'init', 'remove_slug_rewrite_rules' );
 
-function giniit_update_rewrite_on_new_term($term_id, $taxonomy) {
-    $taxonomies = array('service_cat', 'project_cat');
-
-    if (in_array($taxonomy, $taxonomies)) {
-        giniit_rewrite_rules();
+/*
+ * 3. Cập nhật lại rewrite rules khi tạo/sửa bài viết mới cho post type "project" và "service"
+ */
+function new_project_service_post_save( $post_id ) {
+    global $wp_post_types;
+    $post_type = get_post_type( $post_id );
+    $allowed = array( 'project', 'service' );
+    foreach ( $wp_post_types as $type => $custom_post ) {
+        if ( $custom_post->_builtin == false && in_array( $post_type, $allowed ) ) {
+            remove_slug_rewrite_rules( true );
+        }
     }
 }
-add_action('created_term', 'giniit_update_rewrite_on_new_term', 10, 2);
-add_action('edited_term', 'giniit_update_rewrite_on_new_term', 10, 2);
+add_action( 'wp_insert_post', 'new_project_service_post_save' );
+
+/*
+ * 4. Xoá slug trong URL cho taxonomy "project_cat" và "service_cat"
+ */
+add_filter( 'term_link', 'remove_taxonomy_slug_permalink', 10, 3 );
+function remove_taxonomy_slug_permalink( $url, $term, $taxonomy ) {
+    $taxonomies = array( 'project_cat', 'service_cat' );
+    if ( in_array( $taxonomy, $taxonomies ) ) {
+        // Xoá slug taxonomy khỏi URL
+        $url = str_replace( '/' . $taxonomy, '', $url );
+    }
+    return $url;
+}
+
+/*
+ * 5. Thêm rewrite rules cho từng term của taxonomy "project_cat" và "service_cat"
+ */
+function remove_taxonomy_rewrite_rules( $flash = false ) {
+    $taxonomies = array( 'project_cat', 'service_cat' );
+    foreach ( $taxonomies as $taxonomy ) {
+        $terms = get_terms( array(
+            'taxonomy'   => $taxonomy,
+            'hide_empty' => false,
+        ) );
+        if ( $terms && ! is_wp_error( $terms ) ) {
+            $siteurl = esc_url( home_url( '/' ) );
+            foreach ( $terms as $term ) {
+                $term_slug = $term->slug;
+                $base_term = str_replace( $siteurl, '', get_term_link( $term->term_id, $taxonomy ) );
+                add_rewrite_rule( $base_term . '?$', "index.php?{$taxonomy}={$term_slug}", 'top' );
+                add_rewrite_rule( $base_term . 'page/([0-9]{1,})/?$', "index.php?{$taxonomy}={$term_slug}&paged=\$matches[1]", 'top' );
+                add_rewrite_rule( $base_term . '(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', "index.php?{$taxonomy}={$term_slug}&feed=\$matches[1]", 'top' );
+            }
+        }
+    }
+    if ( $flash === true ) {
+        flush_rewrite_rules( false );
+    }
+}
+add_action( 'init', 'remove_taxonomy_rewrite_rules' );
+
+/*
+ * 6. Cập nhật lại rewrite rules khi tạo/sửa taxonomy (project_cat hoặc service_cat)
+ */
+function new_taxonomy_term_flush_rewrite_rules( $term_id, $taxonomy ) {
+    if ( in_array( $taxonomy, array( 'project_cat', 'service_cat' ) ) ) {
+        remove_taxonomy_rewrite_rules( true );
+    }
+}
+add_action( 'create_term', 'new_taxonomy_term_flush_rewrite_rules', 10, 2 );
+add_action( 'edited_term', 'new_taxonomy_term_flush_rewrite_rules', 10, 2 );
+?>

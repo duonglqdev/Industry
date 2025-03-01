@@ -1,7 +1,7 @@
 <?php
-if ( is_post_type_archive( 'service' ) || is_singular( 'service' ) ) {
+if ( is_post_type_archive( 'service' ) || is_singular( 'service' ) || is_tax( 'service_cat' ) ) {
     $bg = get_field( 'banner_service_img', 'option' );
-} elseif ( is_post_type_archive( 'project' ) || is_singular( 'project' ) ) {
+} elseif ( is_post_type_archive( 'project' ) || is_singular( 'project' ) || is_tax( 'project_cat' ) ) {
     $bg = get_field( 'banner_project_img', 'option' );
 } elseif ( is_category() ) {
     $bg = get_field( 'cat_page_banner', 'option' );
