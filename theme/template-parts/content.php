@@ -3,7 +3,7 @@
 		<div class="overflow-hidden">
 			<a href="<?php echo the_permalink() ?>">
 				<img src="<?php gnws_post_thumbnail_full() ?>" alt="<?php the_title() ?>"
-					class="duration-700 block group-hover:[transform:scale(1.5)_rotate(-20deg)] aspect-square object-cover">
+					class="duration-700 block group-hover:[transform:scale(1.5)_rotate(-20deg)] aspect-square object-cover w-full">
 			</a>
 		</div>
 		<div class="p-7.5">
@@ -15,7 +15,7 @@
 						<strong class="font-semibold"><?php echo get_the_date('d/m/y') ?></strong>
 					</li>
 					<li class="inline-block text-primary font-semibold text-2xs uppercase">
-						Bởi <?php the_author(); ?>
+						<?php _e('Bởi', 'gnws') ?> <?php the_author() ?>
 					</li>
 				</ul>
 			</div>

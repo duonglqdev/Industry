@@ -260,10 +260,6 @@ function gnws_tinymce_add_class($settings)
 }
 add_filter('tiny_mce_before_init', 'gnws_tinymce_add_class');
 
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
@@ -271,10 +267,6 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Customizer Wordpress.
@@ -287,9 +279,3 @@ require get_template_directory() . '/inc/customizer-wp.php';
 require get_template_directory() . '/inc/customizer-widget.php';
 
 
-if (class_exists('WooCommerce')) {
-	/**
-	 * Customizer Woocommerce.
-	 */
-	require get_template_directory() . '/inc/customizer-woo.php';
-}

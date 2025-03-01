@@ -158,10 +158,7 @@ function hazo_set_image_meta_image_upload($post_ID)
         wp_update_post($hazo_my_image_meta);
     }
 }
-/**
- * Automatically resizes uploaded images (image tab)
- */
-require get_template_directory() . '/inc/auto-resize-image.php';
+
 
 /**
  * Disable XMLRPC
@@ -336,3 +333,77 @@ class Custom_Menu_Walker extends Walker_Nav_Menu {
 }
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+// Xóa slug khỏi URL của post type
+function giniit_remove_multiple_slugs($post_link, $post) {
+    $post_types = array('service', 'project'); // Danh sách post type cần xóa slug
+
+    if (!in_array(get_post_type($post), $post_types) || 'publish' != $post->post_status) {
+        return $post_link;
+    }
+
+    return str_replace('/' . get_post_type($post) . '/', '/', $post_link);
+}
+add_filter('post_type_link', 'giniit_remove_multiple_slugs', 10, 2);
+
+// Xóa slug khỏi URL của taxonomy
+function giniit_remove_taxonomy_slug($termlink, $term, $taxonomy) {
+    $taxonomies = array('service_cat', 'project_cat'); // Danh sách taxonomy cần xóa slug
+
+    if (in_array($taxonomy, $taxonomies)) {
+        return str_replace('/' . $taxonomy . '/', '/', $termlink);
+    }
+
+    return $termlink;
+}
+add_filter('term_link', 'giniit_remove_taxonomy_slug', 10, 3);
+
+// Thêm rewrite rules để hỗ trợ truy cập mà không có slug
+function giniit_rewrite_rules() {
+    global $wp_rewrite;
+
+    $post_types = array('service', 'project');
+    $taxonomies = array('service_cat', 'project_cat');
+
+    // Rewrite rules cho post type
+    foreach ($post_types as $post_type) {
+        add_rewrite_rule(
+            "([^/]+)?$",
+            "index.php?post_type={$post_type}&name=\$matches[1]",
+            'top'
+        );
+    }
+
+    // Rewrite rules cho taxonomy
+    foreach ($taxonomies as $taxonomy) {
+        add_rewrite_rule(
+            "([^/]+)?$",
+            "index.php?{$taxonomy}=\$matches[1]",
+            'top'
+        );
+    }
+
+    $wp_rewrite->flush_rules();
+}
+add_action('init', 'giniit_rewrite_rules');
+
+// Cập nhật rewrite rules khi thêm mới bài viết hoặc taxonomy
+function giniit_update_rewrite_on_new_post($post_id) {
+    $post_type = get_post_type($post_id);
+    $post_types = array('service', 'project');
+
+    if (in_array($post_type, $post_types)) {
+        giniit_rewrite_rules();
+    }
+}
+add_action('wp_insert_post', 'giniit_update_rewrite_on_new_post');
+
+function giniit_update_rewrite_on_new_term($term_id, $taxonomy) {
+    $taxonomies = array('service_cat', 'project_cat');
+
+    if (in_array($taxonomy, $taxonomies)) {
+        giniit_rewrite_rules();
+    }
+}
+add_action('created_term', 'giniit_update_rewrite_on_new_term', 10, 2);
+add_action('edited_term', 'giniit_update_rewrite_on_new_term', 10, 2);

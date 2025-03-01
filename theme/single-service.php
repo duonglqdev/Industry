@@ -56,59 +56,9 @@ get_header();
 					</div>
 					<div class="xl:col-span-9 lg:col-span-8 md:col-span-7 col-span-12 mb-7.5">
 
-						<div class="grid grid-cols-12 gap-x-6">
-							<div class="col-span-12 mb-7.5">
-								<img alt="" class="rounded-md"
-									src="https://industry.dexignzone.com/tailwind/demo/assets/images/our-work/solarplant/pic7.jpg">
-								<div class="mt-7.5">
-									<h4>Here are a few common sources of renewable energy</h4>
-									<p class="">There are many variations of passages of Lorem Ipsum
-										typesetting
-										industry. Lorem Ipsum has been the industry's standard dummy
-										text ever since the
-										1500s, when an unknown printer took a galley of type and
-										scrambled it to make a
-										type specimen book. </p>
-									<p class="">There are many variations of passages of Lorem Ipsum
-										typesetting
-										industry. Lorem Ipsum has been the industry's standard dummy
-										text ever since the
-										1500s, when an unknown printer took a galley. </p>
-									<p class="">There are many variations of passages of Lorem Ipsum
-										typesetting
-										industry. Lorem Ipsum has been the industry's standard dummy
-										text ever since.
-									</p>
-								</div>
+							<div class="the_content">
+								<?php the_content() ?>
 							</div>
-							<div class="sm:col-span-6 col-span-12 mb-7.5">
-								<img alt="" class="rounded-md"
-									src="https://industry.dexignzone.com/tailwind/demo/assets/images/our-work/solarplant/pic7.jpg">
-							</div>
-							<div class="sm:col-span-6 col-span-12 mb-7.5">
-								<img alt="" class="rounded-md"
-									src="https://industry.dexignzone.com/tailwind/demo/assets/images/our-work/solarplant/pic7.jpg">
-							</div>
-							<div class="col-span-12">
-								<h4>Renewable energy – powering a safer future</h4>
-								<p class="">There are many variations of passages of Lorem Ipsum
-									typesetting industry.
-									Lorem Ipsum has been the industry's standard dummy text ever
-									since the 1500s, when
-									an unknown printer took a galley of type and scrambled it to
-									make a type specimen
-									book. </p>
-								<p class="">There are many variations of passages of Lorem Ipsum
-									typesetting industry.
-									Lorem Ipsum has been the industry's standard dummy text ever
-									since the 1500s, when
-									an unknown printer took a galley. </p>
-								<p class="">There are many variations of passages of Lorem Ipsum
-									typesetting industry.
-									Lorem Ipsum has been the industry's standard dummy text ever
-									since. </p>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>

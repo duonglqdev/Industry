@@ -4,8 +4,7 @@
 		<div class="mb-7.5 text-center">
 
 			<?php if ( get_sub_field( 'main_title' ) ) : ?>
-				<h2
-					class="mb-2.5 text-[40px]/[45px] maxlg:text-3xl font-semibold">
+				<h2 class="mb-2.5 text-[40px]/[45px] maxlg:text-3xl font-semibold">
 					<?php the_sub_field( 'main_title' ); ?>
 				</h2>
 			<?php endif; ?>
@@ -62,7 +61,7 @@
 			?>
 			<div class="row !pl-0 sp10">
 				<div class="w-full">
-					<ul  class="dlab-gallery-listing gallery mfp-gallery text-center filter_wrap">
+					<ul class="dlab-gallery-listing gallery mfp-gallery text-center filter_wrap">
 						<?php while ( $query->have_posts() ) :
 							$query->the_post();
 							// Lấy danh sách terms của taxonomy "project_cat"

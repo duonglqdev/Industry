@@ -1,13 +1,13 @@
 {
-    "key": "group_67bd76520db4d",
-    "title": "Cài đặt tin tức",
+    "key": "group_67c27e3dc8c49",
+    "title": "[Widget] Thư viện ảnh dự án",
     "fields": [
         {
-            "key": "field_67be8ee1ef3dd",
-            "label": "Hình ảnh banner",
-            "name": "",
+            "key": "field_67c27e3d68ecd",
+            "label": "Tiêu đề",
+            "name": "wd_title_gallery_pj",
             "aria-label": "",
-            "type": "tab",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,15 +16,18 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
-            "endpoint": 0
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_67be8eecef3de",
-            "label": "Hình ảnh",
-            "name": "cat_page_banner",
+            "key": "field_67bd76e88b592",
+            "label": "Danh sách ảnh",
+            "name": "ns_post_gallery_pj",
             "aria-label": "",
-            "type": "image",
+            "type": "gallery",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -33,8 +36,10 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "id",
             "library": "all",
+            "min": "",
+            "max": "",
             "min_width": "",
             "min_height": "",
             "min_size": "",
@@ -42,15 +47,16 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
+            "insert": "append",
             "preview_size": "medium"
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "widget",
                 "operator": "==",
-                "value": "news-settings"
+                "value": "gnws_project_gallery_widget"
             }
         ]
     ],
@@ -63,5 +69,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1740799640
+    "modified": 1740799705
 }
