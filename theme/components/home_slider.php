@@ -1,6 +1,6 @@
 <?php if (have_rows('list_slider')): ?>
     <div class="main-banner">
-        <div class="swiper home-slider2 owl-carousel w-full">
+        <div class="home-slider2 owl-carousel w-full">
 
             <?php while (have_rows('list_slider')):
                 the_row(); ?>

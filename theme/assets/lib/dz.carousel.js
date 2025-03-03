@@ -902,24 +902,17 @@ jQuery(window).on('load', function () {
 		}),
 		jQuery('.home-slider2').length > 0)
 	)
-		var e = new Swiper('.home-slider2', {
-			loop: !0,
-			effect: 'fade',
-			slidesPerView: 'auto',
-			autoplay: { delay: 3e3 },
-			pagination: { el: '.swiper-pagination', clickable: !0 },
-		});
-	if (jQuery('.home-slider3').length > 0)
-		var e = new Swiper('.home-slider3', {
-			loop: !0,
-			effect: 'fade',
-			slidesPerView: 'auto',
-			autoplay: { delay: 3e3 },
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-		});
+		if (jQuery('.home-slider3').length > 0)
+			var e = new Swiper('.home-slider3', {
+				loop: !0,
+				effect: 'fade',
+				slidesPerView: 'auto',
+				autoplay: { delay: 3e3 },
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
 	if (jQuery('.home-slider4').length > 0)
 		var e = new Swiper('.home-slider4', {
 			loop: !0,
