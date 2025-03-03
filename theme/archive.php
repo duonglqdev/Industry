@@ -178,7 +178,7 @@ $post_type = get_post_type();
 					<?php endif; ?>
 					<!-- Left part END -->
 					<!-- Side bar start -->
-					<?php get_template_part( 'sidebar' ) ?>
+					<?php get_sidebar()  ?>
 				</div>
 			</div>
 		</div>
