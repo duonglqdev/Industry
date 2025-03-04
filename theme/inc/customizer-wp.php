@@ -68,14 +68,16 @@ include_once(get_stylesheet_directory() . '/inc/acf/acf.php');
 
 
 // Add save and load points for ACF JSON
-add_filter( 'acf/settings/save_json', 'cysp_acf_json_save_point' );
-function cysp_acf_json_save_point( $path ) {
+add_filter('acf/settings/save_json', 'cysp_acf_json_save_point');
+function cysp_acf_json_save_point($path)
+{
     $path = get_stylesheet_directory() . '/acf-json';
     return $path;
 }
 
-add_filter( 'acf/settings/load_json', 'cysp_acf_json_load_point' );
-function cysp_acf_json_load_point( $paths ) {
+add_filter('acf/settings/load_json', 'cysp_acf_json_load_point');
+function cysp_acf_json_load_point($paths)
+{
     $paths[] = get_stylesheet_directory() . '/acf-json';
     return $paths;
 }
@@ -84,7 +86,7 @@ function cysp_acf_json_load_point( $paths ) {
  * Style Dashboard
  */
 //Css Admin
-if (!function_exists('gnws_css_admin')) :
+if (!function_exists('gnws_css_admin')):
     add_action('admin_head', 'gnws_css_admin');
     add_action('admin_enqueue_scripts', 'gnws_css_admin');
     function gnws_css_admin()
@@ -93,7 +95,7 @@ if (!function_exists('gnws_css_admin')) :
     }
 endif;
 //CSS Login
-if (!function_exists('gnws_css_admin_login')) :
+if (!function_exists('gnws_css_admin_login')):
     add_action('login_enqueue_scripts', 'gnws_css_admin_login');
     function gnws_css_admin_login()
     {
@@ -101,28 +103,7 @@ if (!function_exists('gnws_css_admin_login')) :
     }
 endif;
 
-/**
- * Create Option Page from ACF
- */
-add_action('acf/init', 'my_acf_op_init');
-function my_acf_op_init()
-{
-    acf_add_options_sub_page(array(
-        'page_title'  => 'Header',
-        'menu_title'  => 'Header',
-        'parent_slug' => 'themes.php',
-    ));
-    acf_add_options_sub_page(array(
-        'page_title'  => 'Footer',
-        'menu_title'  => 'Footer',
-        'parent_slug' => 'themes.php',
-    ));
-    acf_add_options_sub_page(array(
-        'page_title'  => 'Cài đặt chung',
-        'menu_title'  => 'Cài đặt chung',
-        'parent_slug' => 'themes.php',
-    ));
-}
+
 /**
  * Get home url Author
  */
@@ -154,7 +135,7 @@ function hazo_set_image_meta_image_upload($post_ID)
             'post_excerpt' => '',
             'post_content' => '',
         );
-        update_post_meta($post_ID, '_wp_attachment_image_alt',    $hazo_image_title);
+        update_post_meta($post_ID, '_wp_attachment_image_alt', $hazo_image_title);
         wp_update_post($hazo_my_image_meta);
     }
 }
@@ -208,13 +189,13 @@ function my_remove_page_template()
         global $pagenow;
         if (in_array($pagenow, array('post-new.php', 'post.php')) && get_post_type() == 'page') { ?>
             <script>
-                (function($) {
-                    $(document).ready(function() {
+                (function ($) {
+                    $(document).ready(function () {
                         $('#page_template option[value="template-page/content-woocommerce.php"]').remove();
                     })
                 })(jQuery)
             </script>
-<?php
+            <?php
         }
     }
 }
@@ -253,8 +234,8 @@ add_action('after_setup_theme', 'example_theme_support');
 
 
 /*
-* Fix check child-parent taxonomy in admin
-*/
+ * Fix check child-parent taxonomy in admin
+ */
 add_filter('wp_terms_checklist_args', function ($args, $idPost) {
     $args['checked_ontop'] = false;
 
@@ -265,26 +246,28 @@ add_filter('wp_terms_checklist_args', function ($args, $idPost) {
 /**
  * Disable Remove HTML ACF 6.2.5
  */
-add_filter( 'acf/admin/prevent_escaped_html_notice', '__return_true' );
-add_filter( 'wp_kses_allowed_html', 'acf_add_allowed_iframe_tag', 10, 2 );
-function acf_add_allowed_iframe_tag( $tags, $context ) {
-	if ( $context === 'acf' )
-	{
-		$tags['iframe'] = array(
-			'src' => true,
-			'height' => true,
-			'width' => true,
-			'frameborder' => true,
-			'allowfullscreen' => true,
-		);
-	}
+add_filter('acf/admin/prevent_escaped_html_notice', '__return_true');
+add_filter('wp_kses_allowed_html', 'acf_add_allowed_iframe_tag', 10, 2);
+function acf_add_allowed_iframe_tag($tags, $context)
+{
+    if ($context === 'acf') {
+        $tags['iframe'] = array(
+            'src' => true,
+            'height' => true,
+            'width' => true,
+            'frameborder' => true,
+            'allowfullscreen' => true,
+        );
+    }
 
-	return $tags;
+    return $tags;
 }
-class Custom_Menu_Walker extends Walker_Nav_Menu {
+class Custom_Menu_Walker extends Walker_Nav_Menu
+{
     private $menu_images = []; // Mảng lưu ảnh của từng menu item
 
-    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+    {
         $menu_style = get_field('menu_style', $item);
         $menu_banner_img = get_field('menu_banner_img', $item); // Lấy ID ảnh
 
@@ -327,7 +310,8 @@ class Custom_Menu_Walker extends Walker_Nav_Menu {
         $output .= '</a>';
     }
 
-    function end_el(&$output, $item, $depth = 0, $args = null) {
+    function end_el(&$output, $item, $depth = 0, $args = null)
+    {
         $output .= '</li>';
     }
 }
@@ -339,72 +323,76 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 /*
  * 1. Xoá slug trong URL cho post type "project" và "service"
  */
-function remove_project_service_slug( $post_link, $post ) {
-    if ( ! in_array( get_post_type( $post ), array( 'project', 'service' ) ) || 'publish' != $post->post_status ) {
+function remove_project_service_slug($post_link, $post)
+{
+    if (!in_array(get_post_type($post), array('project', 'service')) || 'publish' != $post->post_status) {
         return $post_link;
     }
     // Xoá slug của post type khỏi URL
-    $post_link = str_replace( '/' . get_post_type( $post ) . '/', '/', $post_link );
+    $post_link = str_replace('/' . get_post_type($post) . '/', '/', $post_link);
     return $post_link;
 }
-add_filter( 'post_type_link', 'remove_project_service_slug', 10, 2 );
+add_filter('post_type_link', 'remove_project_service_slug', 10, 2);
 
 /*
  * 2. Thêm rewrite rules cho post type "project" và "service"
  */
-function remove_slug_rewrite_rules( $flash = false ) {
+function remove_slug_rewrite_rules($flash = false)
+{
     global $wp_post_types, $wpdb;
-    $siteLink = esc_url( home_url( '/' ) );
-    $post_types = array( 'project', 'service' );
-    
-    foreach ( $wp_post_types as $type => $custom_post ) {
-        if ( in_array( $type, $post_types ) ) {
-            if ( $custom_post->_builtin == false ) {
+    $siteLink = esc_url(home_url('/'));
+    $post_types = array('project', 'service');
+
+    foreach ($wp_post_types as $type => $custom_post) {
+        if (in_array($type, $post_types)) {
+            if ($custom_post->_builtin == false) {
                 $querystr = "SELECT {$wpdb->posts}.post_name, {$wpdb->posts}.ID
                              FROM {$wpdb->posts} 
                              WHERE {$wpdb->posts}.post_status = 'publish' 
                              AND {$wpdb->posts}.post_type = '{$type}'";
-                $posts = $wpdb->get_results( $querystr, OBJECT );
-                if ( $posts ) {
-                    foreach ( $posts as $post ) {
-                        $current_slug = get_permalink( $post->ID );
-                        $base = str_replace( $siteLink, '', $current_slug );
-                        add_rewrite_rule( $base . '?$', "index.php?{$custom_post->query_var}={$post->post_name}", 'top' );
+                $posts = $wpdb->get_results($querystr, OBJECT);
+                if ($posts) {
+                    foreach ($posts as $post) {
+                        $current_slug = get_permalink($post->ID);
+                        $base = str_replace($siteLink, '', $current_slug);
+                        add_rewrite_rule($base . '?$', "index.php?{$custom_post->query_var}={$post->post_name}", 'top');
                     }
                 }
             }
         }
     }
-    if ( $flash === true ) {
-        flush_rewrite_rules( false );
+    if ($flash === true) {
+        flush_rewrite_rules(false);
     }
 }
-add_action( 'init', 'remove_slug_rewrite_rules' );
+add_action('init', 'remove_slug_rewrite_rules');
 
 /*
  * 3. Cập nhật lại rewrite rules khi tạo/sửa bài viết mới cho post type "project" và "service"
  */
-function new_project_service_post_save( $post_id ) {
+function new_project_service_post_save($post_id)
+{
     global $wp_post_types;
-    $post_type = get_post_type( $post_id );
-    $allowed = array( 'project', 'service' );
-    foreach ( $wp_post_types as $type => $custom_post ) {
-        if ( $custom_post->_builtin == false && in_array( $post_type, $allowed ) ) {
-            remove_slug_rewrite_rules( true );
+    $post_type = get_post_type($post_id);
+    $allowed = array('project', 'service');
+    foreach ($wp_post_types as $type => $custom_post) {
+        if ($custom_post->_builtin == false && in_array($post_type, $allowed)) {
+            remove_slug_rewrite_rules(true);
         }
     }
 }
-add_action( 'wp_insert_post', 'new_project_service_post_save' );
+add_action('wp_insert_post', 'new_project_service_post_save');
 
 /*
  * 4. Xoá slug trong URL cho taxonomy "project_cat" và "service_cat"
  */
-add_filter( 'term_link', 'remove_taxonomy_slug_permalink', 10, 3 );
-function remove_taxonomy_slug_permalink( $url, $term, $taxonomy ) {
-    $taxonomies = array( 'project_cat', 'service_cat' );
-    if ( in_array( $taxonomy, $taxonomies ) ) {
+add_filter('term_link', 'remove_taxonomy_slug_permalink', 10, 3);
+function remove_taxonomy_slug_permalink($url, $term, $taxonomy)
+{
+    $taxonomies = array('project_cat', 'service_cat');
+    if (in_array($taxonomy, $taxonomies)) {
         // Xoá slug taxonomy khỏi URL
-        $url = str_replace( '/' . $taxonomy, '', $url );
+        $url = str_replace('/' . $taxonomy, '', $url);
     }
     return $url;
 }
@@ -412,38 +400,40 @@ function remove_taxonomy_slug_permalink( $url, $term, $taxonomy ) {
 /*
  * 5. Thêm rewrite rules cho từng term của taxonomy "project_cat" và "service_cat"
  */
-function remove_taxonomy_rewrite_rules( $flash = false ) {
-    $taxonomies = array( 'project_cat', 'service_cat' );
-    foreach ( $taxonomies as $taxonomy ) {
-        $terms = get_terms( array(
-            'taxonomy'   => $taxonomy,
+function remove_taxonomy_rewrite_rules($flash = false)
+{
+    $taxonomies = array('project_cat', 'service_cat');
+    foreach ($taxonomies as $taxonomy) {
+        $terms = get_terms(array(
+            'taxonomy' => $taxonomy,
             'hide_empty' => false,
-        ) );
-        if ( $terms && ! is_wp_error( $terms ) ) {
-            $siteurl = esc_url( home_url( '/' ) );
-            foreach ( $terms as $term ) {
+        ));
+        if ($terms && !is_wp_error($terms)) {
+            $siteurl = esc_url(home_url('/'));
+            foreach ($terms as $term) {
                 $term_slug = $term->slug;
-                $base_term = str_replace( $siteurl, '', get_term_link( $term->term_id, $taxonomy ) );
-                add_rewrite_rule( $base_term . '?$', "index.php?{$taxonomy}={$term_slug}", 'top' );
-                add_rewrite_rule( $base_term . 'page/([0-9]{1,})/?$', "index.php?{$taxonomy}={$term_slug}&paged=\$matches[1]", 'top' );
-                add_rewrite_rule( $base_term . '(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', "index.php?{$taxonomy}={$term_slug}&feed=\$matches[1]", 'top' );
+                $base_term = str_replace($siteurl, '', get_term_link($term->term_id, $taxonomy));
+                add_rewrite_rule($base_term . '?$', "index.php?{$taxonomy}={$term_slug}", 'top');
+                add_rewrite_rule($base_term . 'page/([0-9]{1,})/?$', "index.php?{$taxonomy}={$term_slug}&paged=\$matches[1]", 'top');
+                add_rewrite_rule($base_term . '(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', "index.php?{$taxonomy}={$term_slug}&feed=\$matches[1]", 'top');
             }
         }
     }
-    if ( $flash === true ) {
-        flush_rewrite_rules( false );
+    if ($flash === true) {
+        flush_rewrite_rules(false);
     }
 }
-add_action( 'init', 'remove_taxonomy_rewrite_rules' );
+add_action('init', 'remove_taxonomy_rewrite_rules');
 
 /*
  * 6. Cập nhật lại rewrite rules khi tạo/sửa taxonomy (project_cat hoặc service_cat)
  */
-function new_taxonomy_term_flush_rewrite_rules( $term_id, $taxonomy ) {
-    if ( in_array( $taxonomy, array( 'project_cat', 'service_cat' ) ) ) {
-        remove_taxonomy_rewrite_rules( true );
+function new_taxonomy_term_flush_rewrite_rules($term_id, $taxonomy)
+{
+    if (in_array($taxonomy, array('project_cat', 'service_cat'))) {
+        remove_taxonomy_rewrite_rules(true);
     }
 }
-add_action( 'create_term', 'new_taxonomy_term_flush_rewrite_rules', 10, 2 );
-add_action( 'edited_term', 'new_taxonomy_term_flush_rewrite_rules', 10, 2 );
+add_action('create_term', 'new_taxonomy_term_flush_rewrite_rules', 10, 2);
+add_action('edited_term', 'new_taxonomy_term_flush_rewrite_rules', 10, 2);
 ?>

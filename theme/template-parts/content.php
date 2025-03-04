@@ -1,12 +1,12 @@
-<div class="item">
-	<div class="bg-white rounded overflow-hidden shadow-blog relative mb-7.5 group">
+<div class="item h-full">
+	<div class="flex flex-col bg-white rounded overflow-hidden shadow-blog relative group h-full">
 		<div class="overflow-hidden">
 			<a href="<?php echo the_permalink() ?>">
 				<img src="<?php gnws_post_thumbnail_full() ?>" alt="<?php the_title() ?>"
 					class="duration-700 block group-hover:[transform:scale(1.5)_rotate(-20deg)] aspect-square object-cover w-full">
 			</a>
 		</div>
-		<div class="p-7.5">
+		<div class="p-7.5 flex-1 flex flex-col">
 			<div
 				class="relative border-b border-black/10 pb-3 mb-2.5 after:content-[''] after:w-13.5 after:h-0.5 after:bg-primary after:absolute after:-bottom-px after:left-0">
 				<ul>
@@ -24,7 +24,7 @@
 						href="<?php echo the_permalink() ?>"><?php the_title() ?></a>
 				</h3>
 			</div>
-			<div class="mt-3.75">
+			<div class="mt-auto">
 				<a href="<?php echo the_permalink() ?>" title="<?php _e('Đọc thêm', 'gnws') ?>"
 					class="btn bg-primary relative overflow-hidden z-1 after:content-[''] after:absolute after:top-0 after:left-0 after:size-full after:-z-1 after:bg-primaryhover after:duration-300 after:-translate-x-full hover:after:translate-x-0 after:delay-200 before:content-[''] before:absolute before:top-0 before:left-0 before:size-full before:-z-1 before:bg-black/50 before:duration-300 before:-translate-x-full hover:before:translate-x-0">
 					<?php _e('Đọc thêm', 'gnws') ?>

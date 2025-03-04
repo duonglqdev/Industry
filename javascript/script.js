@@ -8,6 +8,11 @@
 		handleSlider();
 		openMobileNav();
 		openContent();
+
+		$(window).on('load', function () {
+			setEqualCardHeight();
+		});
+		window.addEventListener('resize', setEqualCardHeight);
 		new WOW().init();
 	});
 
@@ -32,6 +37,13 @@
 			},
 		});
 	}
+
+	jQuery('.owl-carousel').on(
+		'initialized.owl.carousel resized.owl.carousel',
+		function () {
+			setEqualCardHeight();
+		}
+	);
 
 	function menuMobile() {
 		$('.navbar-nav li.menu-item-has-children>ul').before(
@@ -180,5 +192,28 @@
 		});
 
 		$('.acod-head.default-open').addClass('active').next().show();
+	}
+
+	function setEqualCardHeight() {
+		const cards = document.querySelectorAll('.item');
+		if (!cards.length) return;
+
+		cards.forEach((card) => (card.style.height = 'auto'));
+
+		setTimeout(() => {
+			let maxHeight = 0;
+
+			// Tìm thẻ cao nhất
+			cards.forEach((card) => {
+				// Buộc tính toán lại bố cục để có được chiều cao chính xác
+				const height = card.offsetHeight;
+				maxHeight = Math.max(maxHeight, height);
+			});
+
+			// Set chiều cao theo card cao nhất
+			if (maxHeight > 0) {
+				cards.forEach((card) => (card.style.height = `${maxHeight}px`));
+			}
+		}, 150);
 	}
 })();
