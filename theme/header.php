@@ -25,7 +25,7 @@
 <body <?php body_class('font-body'); ?>>
 
 	<?php wp_body_open(); ?>
-	<header class="relative z-99999 block header ">
+	<header class="sticky top-0 z-99999 block header shadow-sm">
 		<div class="bg-white border-b border-black/5 max-md:py-1.25 top-bar">
 			<div class="container">
 				<div class="row flex flex-wrap md:justify-between justify-center items-center">
@@ -110,7 +110,7 @@
 					</div>
 
 					<div class="dlab-quik-search bg-black/90 fixed left-0 top-0 size-full z-999 overflow-hidden hidden">
-						<form action="<?php echo get_home_url()?>"
+						<form action="<?php echo get_home_url() ?>"
 							class="w-full max-w-25 m-auto relative top-1/2 duration-500 -translate-y-1/2 opacity-0">
 							<input name="s" type="text"
 								class="p-3.75 pr-14.5 w-full h-[90px] bg-transparent text-white text-xl border-b-2 border-white/20 outline-none"
